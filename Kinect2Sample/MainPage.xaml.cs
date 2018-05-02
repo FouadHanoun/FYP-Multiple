@@ -576,7 +576,7 @@ namespace Kinect2Sample
                         using (var dataWriter = new DataWriter(outputStream))
                         {
                             
-                            dataWriter.WriteString((order.IndexOf(body_num)+1).ToString()+"-");
+                            dataWriter.WriteString(order.IndexOf(body_num).ToString()+"-");
                             dataWriter.WriteString(timestamp.ToString() + Environment.NewLine);
                             foreach (var feature in Features)
                             {
