@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>EIFRWSE01034</Machine>
+    <WindowsUser>fouad.hannoun</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|x86</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>a4548d07-af25-4b98-b7b4-ad4c4798fc82</PackageIdentityName>
+    <PackageIdentityPublisher>CN=fouad.hannoun</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample\Kinect2Sample\obj\x86\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType></RemoteDeploymentType>
+    <PackageRegistrationPath></PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample\Kinect2Sample\bin\x86\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample\Kinect2Sample\bin\x86\Debug\Kinect2Sample.exe">
+      <PackagePath>Kinect2Sample.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\References\CommonConfiguration\neutral\Microsoft.Kinect.Face.winmd">
+      <PackagePath>Microsoft.Kinect.Face.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Fusion\2.0\References\CommonConfiguration\neutral\Microsoft.Kinect.Fusion.winmd">
+      <PackagePath>Microsoft.Kinect.Fusion.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Toolkit.Input\2.0\References\CommonConfiguration\neutral\Microsoft.Kinect.Toolkit.Input.winmd">
+      <PackagePath>Microsoft.Kinect.Toolkit.Input.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.VisualGestureBuilder\2.0\References\CommonConfiguration\neutral\Microsoft.Kinect.VisualGestureBuilder.winmd">
+      <PackagePath>Microsoft.Kinect.VisualGestureBuilder.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Xaml.Controls\2.0\References\CommonConfiguration\neutral\Microsoft.Kinect.Xaml.Controls.winmd">
+      <PackagePath>Microsoft.Kinect.Xaml.Controls.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\AAMModel\3DModel.bin">
+      <PackagePath>NuiDatabase\HDFaceTracker\AAMModel\3DModel.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\AAMModel\3DModel_globalPCA.bin">
+      <PackagePath>NuiDatabase\HDFaceTracker\AAMModel\3DModel_globalPCA.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\AAMModel\AAMModelData_F.bin">
+      <PackagePath>NuiDatabase\HDFaceTracker\AAMModel\AAMModelData_F.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\AAMModel\AAMModelData_HLP.bin">
+      <PackagePath>NuiDatabase\HDFaceTracker\AAMModel\AAMModelData_HLP.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\AAMModel\AAMModelData_HRP.bin">
+      <PackagePath>NuiDatabase\HDFaceTracker\AAMModel\AAMModelData_HRP.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\MouthModel\close.mod.bin">
+      <PackagePath>NuiDatabase\HDFaceTracker\MouthModel\close.mod.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\FaceAlignment.bin">
+      <PackagePath>NuiDatabase\FaceAlignment.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\FaceAlignmentColor.bin">
+      <PackagePath>NuiDatabase\FaceAlignmentColor.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\FaceAlignmentColor27.bin">
+      <PackagePath>NuiDatabase\FaceAlignmentColor27.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\FaceDetector.bin">
+      <PackagePath>NuiDatabase\FaceDetector.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\FaceOrientation.bin">
+      <PackagePath>NuiDatabase\FaceOrientation.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\FaceTrackingColor27.bin">
+      <PackagePath>NuiDatabase\FaceTrackingColor27.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\EvalModel\front.mod.bin">
+      <PackagePath>NuiDatabase\HDFaceTracker\EvalModel\front.mod.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\ViewModel\front.mod.bin">
+      <PackagePath>NuiDatabase\HDFaceTracker\ViewModel\front.mod.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\EvalModel\front_nose.mod.bin">
+      <PackagePath>NuiDatabase\HDFaceTracker\EvalModel\front_nose.mod.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\EvalModel\left.mod.bin">
+      <PackagePath>NuiDatabase\HDFaceTracker\EvalModel\left.mod.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\ViewModel\left.mod.bin">
+      <PackagePath>NuiDatabase\HDFaceTracker\ViewModel\left.mod.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\EvalModel\left_nose.mod.bin">
+      <PackagePath>NuiDatabase\HDFaceTracker\EvalModel\left_nose.mod.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\MouthModel\lopen.mod.bin">
+      <PackagePath>NuiDatabase\HDFaceTracker\MouthModel\lopen.mod.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\AAMModel\PCAMaskBias.bin">
+      <PackagePath>NuiDatabase\HDFaceTracker\AAMModel\PCAMaskBias.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\EvalModel\right.mod.bin">
+      <PackagePath>NuiDatabase\HDFaceTracker\EvalModel\right.mod.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\ViewModel\right.mod.bin">
+      <PackagePath>NuiDatabase\HDFaceTracker\ViewModel\right.mod.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\EvalModel\right_nose.mod.bin">
+      <PackagePath>NuiDatabase\HDFaceTracker\EvalModel\right_nose.mod.bin</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.VisualGestureBuilder\2.0\Redist\CommonConfiguration\x86\vgbtechs\AdaBoostTech.dll">
+      <PackagePath>vgbtechs\AdaBoostTech.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Fusion\2.0\Redist\CommonConfiguration\x86\Kinect20.Fusion.dll">
+      <PackagePath>Kinect20.Fusion.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\Microsoft.Kinect.Face.dll">
+      <PackagePath>Microsoft.Kinect.Face.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Fusion\2.0\Redist\CommonConfiguration\x86\Microsoft.Kinect.Fusion.dll">
+      <PackagePath>Microsoft.Kinect.Fusion.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Toolkit.Input\2.0\Redist\CommonConfiguration\x86\Microsoft.Kinect.Toolkit.Input.dll">
+      <PackagePath>Microsoft.Kinect.Toolkit.Input.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.VisualGestureBuilder\2.0\Redist\CommonConfiguration\x86\Microsoft.Kinect.VisualGestureBuilder.dll">
+      <PackagePath>Microsoft.Kinect.VisualGestureBuilder.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Xaml.Controls\2.0\Redist\CommonConfiguration\x86\Microsoft.Kinect.Xaml.Controls.dll">
+      <PackagePath>Microsoft.Kinect.Xaml.Controls.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.VisualGestureBuilder\2.0\Redist\CommonConfiguration\x86\vgbtechs\RFRProgressTech.dll">
+      <PackagePath>vgbtechs\RFRProgressTech.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\MouthModel\close.p.txt">
+      <PackagePath>NuiDatabase\HDFaceTracker\MouthModel\close.p.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\EvalModel\Front.p.txt">
+      <PackagePath>NuiDatabase\HDFaceTracker\EvalModel\Front.p.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\ViewModel\front.p.txt">
+      <PackagePath>NuiDatabase\HDFaceTracker\ViewModel\front.p.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\WholeHeadModel\FullHeadMaskVertexCorrespondence.txt">
+      <PackagePath>NuiDatabase\HDFaceTracker\WholeHeadModel\FullHeadMaskVertexCorrespondence.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\EvalModel\left.p.txt">
+      <PackagePath>NuiDatabase\HDFaceTracker\EvalModel\left.p.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\ViewModel\left.p.txt">
+      <PackagePath>NuiDatabase\HDFaceTracker\ViewModel\left.p.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\MouthModel\lopen.p.txt">
+      <PackagePath>NuiDatabase\HDFaceTracker\MouthModel\lopen.p.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\AAMModel\Map2D3D_F.txt">
+      <PackagePath>NuiDatabase\HDFaceTracker\AAMModel\Map2D3D_F.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\AAMModel\Map2D3D_HLP.txt">
+      <PackagePath>NuiDatabase\HDFaceTracker\AAMModel\Map2D3D_HLP.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\AAMModel\Map2D3D_HRP.txt">
+      <PackagePath>NuiDatabase\HDFaceTracker\AAMModel\Map2D3D_HRP.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\MouthModel\MeanShapes.txt">
+      <PackagePath>NuiDatabase\HDFaceTracker\MouthModel\MeanShapes.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\Expression\NuiExpressionModelManifest.txt">
+      <PackagePath>NuiDatabase\Expression\NuiExpressionModelManifest.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\EvalModel\right.p.txt">
+      <PackagePath>NuiDatabase\HDFaceTracker\EvalModel\right.p.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\ViewModel\right.p.txt">
+      <PackagePath>NuiDatabase\HDFaceTracker\ViewModel\right.p.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\SkintoneModel\skintone_appearance_classifier.txt">
+      <PackagePath>NuiDatabase\HDFaceTracker\SkintoneModel\skintone_appearance_classifier.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\SkintoneModel\skintone_shape_classifier.txt">
+      <PackagePath>NuiDatabase\HDFaceTracker\SkintoneModel\skintone_shape_classifier.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Xaml.Controls\2.0\Redist\CommonConfiguration\x86\Microsoft.Kinect.Xaml.Controls\CursorSpriteSheet.png">
+      <PackagePath>Microsoft.Kinect.Xaml.Controls\CursorSpriteSheet.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\Expression\ExpressionRandomForest.model">
+      <PackagePath>NuiDatabase\Expression\ExpressionRandomForest.model</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\Expression\EyeLeftRandomForest.model">
+      <PackagePath>NuiDatabase\Expression\EyeLeftRandomForest.model</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\Expression\EyeRightRandomForest.model">
+      <PackagePath>NuiDatabase\Expression\EyeRightRandomForest.model</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\Expression\FacialHairIRRandomForest.model">
+      <PackagePath>NuiDatabase\Expression\FacialHairIRRandomForest.model</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\Expression\FacialHairRandomForest.model">
+      <PackagePath>NuiDatabase\Expression\FacialHairRandomForest.model</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\Expression\GlassesIRRandomForest.model">
+      <PackagePath>NuiDatabase\Expression\GlassesIRRandomForest.model</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\Expression\GlassesRandomForest.model">
+      <PackagePath>NuiDatabase\Expression\GlassesRandomForest.model</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\Expression\LookingAwayRandomForest.model">
+      <PackagePath>NuiDatabase\Expression\LookingAwayRandomForest.model</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\Expression\MouthMovedRandomForest.model">
+      <PackagePath>NuiDatabase\Expression\MouthMovedRandomForest.model</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\Expression\MouthOpenRandomForest.model">
+      <PackagePath>NuiDatabase\Expression\MouthOpenRandomForest.model</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\EyeState\EyeClose.pra">
+      <PackagePath>NuiDatabase\HDFaceTracker\EyeState\EyeClose.pra</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\EyeState\LeftCloseRightOpen44Flip.pra">
+      <PackagePath>NuiDatabase\HDFaceTracker\EyeState\LeftCloseRightOpen44Flip.pra</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\EyeState\LeftOpenRightClose44Flip.pra">
+      <PackagePath>NuiDatabase\HDFaceTracker\EyeState\LeftOpenRightClose44Flip.pra</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\EyeState\EyeClose.wgh">
+      <PackagePath>NuiDatabase\HDFaceTracker\EyeState\EyeClose.wgh</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\EyeState\LeftCloseRightOpen44Flip.wgh">
+      <PackagePath>NuiDatabase\HDFaceTracker\EyeState\LeftCloseRightOpen44Flip.wgh</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\EyeState\LeftOpenRightClose44Flip.wgh">
+      <PackagePath>NuiDatabase\HDFaceTracker\EyeState\LeftOpenRightClose44Flip.wgh</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\Expression\Feature.config">
+      <PackagePath>NuiDatabase\Expression\Feature.config</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\Redist\CommonConfiguration\x86\NuiDatabase\HDFaceTracker\WholeHeadModel\fullMeanHead60_tri.ply">
+      <PackagePath>NuiDatabase\HDFaceTracker\WholeHeadModel\fullMeanHead60_tri.ply</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Xaml.Controls\2.0\Redist\CommonConfiguration\x86\Microsoft.Kinect.Xaml.Controls\KinectUserViewerPixelShader.cso">
+      <PackagePath>Microsoft.Kinect.Xaml.Controls\KinectUserViewerPixelShader.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Xaml.Controls\2.0\Redist\CommonConfiguration\x86\Microsoft.Kinect.Xaml.Controls\KinectUserViewerVertexShader.cso">
+      <PackagePath>Microsoft.Kinect.Xaml.Controls\KinectUserViewerVertexShader.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Xaml.Controls\2.0\Redist\CommonConfiguration\x86\Microsoft.Kinect.Xaml.Controls\SelectButtonClick.wav">
+      <PackagePath>Microsoft.Kinect.Xaml.Controls\SelectButtonClick.wav</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Xaml.Controls\2.0\Redist\CommonConfiguration\x86\Microsoft.Kinect.Xaml.Controls\SelectButtonPressingKinect.wav">
+      <PackagePath>Microsoft.Kinect.Xaml.Controls\SelectButtonPressingKinect.wav</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample\Kinect2Sample\Database\Gestures.gbd">
+      <PackagePath>Database\Gestures.gbd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample\Kinect2Sample\Database\Crossed Arms.gbd">
+      <PackagePath>Database\Crossed Arms.gbd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample\Kinect2Sample\Database\Sad.gbd">
+      <PackagePath>Database\Sad.gbd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample\Kinect2Sample\Database\AllGestures.gbd">
+      <PackagePath>Database\AllGestures.gbd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample\Kinect2Sample\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample\Kinect2Sample\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample\Kinect2Sample\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample\Kinect2Sample\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample\Kinect2Sample\bin\x86\Debug\Kinect2Sample.xr.xml">
+      <PackagePath>Kinect2Sample.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample\Kinect2Sample\bin\x86\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample\Kinect2Sample\bin\x86\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample\Kinect2Sample\bin\x86\Debug\Microsoft.Kinect.Xaml.Controls\Themes\Generic.xbf">
+      <PackagePath>Microsoft.Kinect.Xaml.Controls\Themes\Generic.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample\Kinect2Sample\bin\x86\Debug\Microsoft.Kinect.Xaml.Controls\SpriteSheet.xbf">
+      <PackagePath>Microsoft.Kinect.Xaml.Controls\SpriteSheet.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample\Kinect2Sample\bin\x86\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.12.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.12.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.12.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\WindowsPreview.Kinect\2.0\">
+      <Name>Microsoft.WindowsPreview.Kinect.8.1</Name>
+      <Version>2.0.1410.19000</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsPreview.Kinect.8.1, MinVersion = 2.0.1410.19000</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\WindowsPreview.Kinect\2.0\.\AppX\Debug\x64\WindowsPreview.Kinect_2.0_x64.appx</AppxLocation>
+      <MoreInfo>http://www.kinectforwindows.com</MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\WindowsPreview.Kinect\2.0\">
+      <Name>Microsoft.WindowsPreview.Kinect.8.1</Name>
+      <Version>2.0.1410.19000</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsPreview.Kinect.8.1, MinVersion = 2.0.1410.19000</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\WindowsPreview.Kinect\2.0\.\AppX\Debug\x86\WindowsPreview.Kinect_2.0_Win32.appx</AppxLocation>
+      <MoreInfo>http://www.kinectforwindows.com</MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

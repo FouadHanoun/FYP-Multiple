@@ -1,0 +1,1 @@
+C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\Kinect2Sample2.csproj;x64

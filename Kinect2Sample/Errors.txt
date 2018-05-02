@@ -1,0 +1,2 @@
+10: Writing on file, might be a problem with the synchronisation of writing (trying to open while already opened).
+11: Failed to create folder.

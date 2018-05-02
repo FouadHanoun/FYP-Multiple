@@ -1,0 +1,13 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\users\fouad.hannoun\documents\visual studio 2015\projects\kinect2sample\kinect2sample\obj\x86\debug\intermediatexaml\kinect2sample.exe" HashGuid="b058b54f-44b1-6a85-15af-9f1ab7d76e88" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\microsoft.kinect.face\2.0\references\commonconfiguration\neutral\microsoft.kinect.face.winmd" HashGuid="a37c50e9-c725-60ab-ab30-63aadc22fec1" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\microsoft.kinect.fusion\2.0\references\commonconfiguration\neutral\microsoft.kinect.fusion.winmd" HashGuid="6f12a7c0-ae9d-0fcb-6981-80fe6a70677d" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\microsoft.kinect.toolkit.input\2.0\references\commonconfiguration\neutral\microsoft.kinect.toolkit.input.winmd" HashGuid="e6525654-5632-5cf5-4387-7da4061d49ea" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\microsoft.kinect.visualgesturebuilder\2.0\references\commonconfiguration\neutral\microsoft.kinect.visualgesturebuilder.winmd" HashGuid="e7f2ed96-d630-2d07-67b0-7a56f2684922" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\microsoft.kinect.xaml.controls\2.0\references\commonconfiguration\neutral\microsoft.kinect.xaml.controls.winmd" HashGuid="4a3c2739-33b3-a39a-6361-713b287a923a" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\windowspreview.kinect\2.0\references\commonconfiguration\neutral\windowspreview.data.winmd" HashGuid="bec3b354-5b74-1234-191f-25a435755c0a" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\windowspreview.kinect\2.0\references\commonconfiguration\neutral\windowspreview.kinect.winmd" HashGuid="d7412096-a3c7-9108-a946-0ff0cc614d3f" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

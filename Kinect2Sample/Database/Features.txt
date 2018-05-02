@@ -1,0 +1,1177 @@
+Step 1 of 4: Loading Labeled Examples
+Examples Loaded: Positive(468), Negative(784)
+Done
+
+Feeding Examples...Done. Took (0) seconds
+Training Started...
+
+Step 2 of 4: Generating a Pool of Weak Classifiers
+	Using Hands data: No
+	Using Skeleton data : Yes
+	 1/38 - Feature: DiffPositionX (80)
+	 2/38 - Feature: DiffPositionY (121)
+	 3/38 - Feature: DiffPositionZ (169)
+	 4/38 - Feature: Angles (682)
+	 5/38 - Feature: TimeSpaceAngles (550)
+	 6/38 - Feature: Speed (143)
+	 7/38 - Feature: VelocityX (132)
+	 8/38 - Feature: VelocityY (150)
+	 9/38 - Feature: VelocityZ (133)
+	10/38 - Feature: AngleVelocity (728)
+	11/38 - Feature: AngleAcceleration (968)
+	12/38 - Feature: MuscleForceX (72)
+	13/38 - Feature: MuscleForceY (95)
+	14/38 - Feature: MuscleForceZ (58)
+	15/38 - Feature: MuscleTorqueX (340)
+	16/38 - Feature: MuscleTorqueY (45)
+	17/38 - Feature: MuscleTorqueZ (207)
+	18/38 - Feature: MusclePower (82)
+	19/38 - Feature: DiffMuscleForceX (525)
+	20/38 - Feature: DiffMuscleForceY (425)
+	21/38 - Feature: DiffMuscleForceZ (448)
+	22/38 - Feature: VelocityX^2 (77)
+	23/38 - Feature: VelocityY^2 (70)
+	24/38 - Feature: VelocityZ^2 (92)
+	25/38 - Feature: Speed^2 (104)
+	26/38 - Feature: Acceleration (84)
+	27/38 - Feature: AccelerationX (95)
+	28/38 - Feature: AccelerationY (79)
+	29/38 - Feature: AccelerationZ (71)
+	30/38 - Feature: BoneLengthChanges (724)
+	31/38 - Feature: HandValueRaw (Excluded)
+	32/38 - Feature: HandValueMultiClass (Excluded)
+	33/38 - Feature: HandDifferenceRawBest (Excluded)
+	34/38 - Feature: HandDifferenceMultiClassBest (Excluded)
+	35/38 - Feature: HandDifferenceRaw (Excluded)
+	36/38 - Feature: HandDifferenceMultiClass (Excluded)
+	37/38 - Feature: RefinementWrist (Excluded)
+	38/38 - Feature: RefinmentHand (Excluded)
+	Total Classifiers Combined: 7549
+	Num weak classifiers generated: 7549
+	Duration: 0 minutes, 9 seconds
+Done
+
+
+Step 3 of 4: Training Strong Classifier
+	-Evaluating classifier data for each example skeleton frame...
+Done
+	-Running AdaBoost using 8 (of 8 available) hardware threads...
+Done
+	Num weak classifiers: 1000
+	Duration: 0 minutes, 1 seconds
+
+
+Step 4 of 4: Optimizing detection parameters
+	-Generate matrix of test results using different detection parameters...
+	Filtering 7 frames using detection threshold 0.049000
+	Duration: 0 minutes, 0 seconds
+Done
+
+
+Testing on Training Data
+    Raw Per Frame Results:
+	% Accuracy True Positives: 100.000000 % (466/466)
+	% Error False Positives: 0.000000 % (0/782)
+    Filtered Per Gesture Results:
+	% Accuracy True Positives: 100.000000 % (8/8)
+	% Error False Positives: 0.000000 % (0/8)
+
+Top 10 contributing weak classifiers:
+	Angles( SpineMid, Head, HandTipLeft ) using inferred joints, fValue < 30.000000, alpha = 2.241097
+	Angles( SpineMid, Head, HandTipRight ) rejecting inferred joints, fValue < 26.000000, alpha = 1.269468
+	Angles( WristLeft, Head, WristRight ) using inferred joints, fValue < 50.000000, alpha = 1.184151
+	AngleVelocity( WristLeft, Head, WristRight ) using inferred joints, fValue < 0.500000, alpha = 1.078799
+	DiffMuscleForceZ( ElbowRight, HandTipLeft ) rejecting inferred joints, fValue < -0.200000, alpha = 1.056574
+	Angles( SpineMid, Head, HandTipLeft ) using inferred joints, fValue < 26.000000, alpha = 0.989597
+	MusclePower( SpineShoulder ) using inferred joints, fValue < 0.000000, alpha = 0.966206
+	DiffMuscleForceZ( ElbowLeft, ShoulderRight ) using inferred joints, fValue < -1.000000, alpha = 0.959452
+	Angles( ShoulderLeft, SpineShoulder, ShoulderRight ) using inferred joints, fValue < 148.000000, alpha = 0.956259
+	Angles( SpineMid, Head, HandTipRight ) using inferred joints, fValue < 30.000000, alpha = 0.904814
+
+Done
+
+Training...Done. Took (10) seconds
+Saving Gesture...
+Saving Gesture...Done. Took (0) seconds
+BUILD: Starting trainer C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Tools\KinectStudio\AdaBoostTech.dll
+Starting Training for: ArmsRaisedShoulder( ArmsRaisedShoulder )
+Training: Job(ArmsRaisedShoulder), Tag (ArmsRaisedShoulder), ProjectFile (C:\Users\fouad.hannoun\AppData\Local\Temp\iddrl5i0.2k1\e2s5izgx.a11), InputDatabase (C:\Users\fouad.hannoun\AppData\Local\Temp\tmp90A9.tmp_Database)
+Nothing changed from last build. Using last built training datbase.
+BUILD: Starting trainer C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Tools\KinectStudio\AdaBoostTech.dll
+Starting Training for: ArmsRaisedUp( ArmsRaisedUp )
+Training: Job(ArmsRaisedUp), Tag (ArmsRaisedUp), ProjectFile (C:\Users\fouad.hannoun\AppData\Local\Temp\ywmpfyem.xwl\c5cdnhdr.1fr), InputDatabase (C:\Users\fouad.hannoun\AppData\Local\Temp\tmp90A9.tmp_Database)
+	Training Parameters for Tag: <(null)>
+		Data Streams:
+			Use Hands Data: Yes
+			Use Skeleton Data: Yes
+		Joints:
+			Ignore Left Arm: No
+			Ignore Right Arm: No
+			Ignore Lower Body: Yes
+			Effective Joint Mask: 0xfffffffffff11fff
+			Effective Hand Mask: 0x3
+			Excluded: KneeLeft, AnkleLeft, FootLeft, KneeRight, AnkleRight, FootRight
+			Included: SpineBase, SpineMid, Neck, Head, ShoulderLeft, ElbowLeft, WristLeft, HandLeft, ShoulderRight, ElbowRight, WristRight, HandRight, HipLeft, HipRight, SpineShoulder, HandTipLeft, ThumbLeft, HandTipRight, ThumbRight
+		Features:
+			Effective Feature Mask: 0xffffffffffffffff
+Generating labeled Examples...
+WARNING: Project property ("Duplicate And Mirror Data During Training") is set, but the project name does not contain _LEFT or _RIGHT. Mirroring samples with the same tag.
+	Processing (1/2):E:\FYP Fouad\Repository\Sadness Gestures\ArmsRaisedUp.xef
+	-Duplicating examples and mirroring labels...
+	Processing (2/2):E:\FYP Fouad\Repository\Sadness Gestures\ArmsRaisedUp2.xef
+	-Duplicating examples and mirroring labels...
+
+Duration: 0 hours, 0 minutes, 8 seconds
+Num Labeled Examples: 1400
+Ratio positive to negative labeled examples: 1.0 : 1.413793
+Total Num Gestures: 26
+Num Gestures Labeled as ArmsRaisedUp: 14
+Ratio ArmsRaisedUp to all other gestures: 1.0 : 0.8571429
+
+Done
+
+Generating labeled Examples...Done. Took (8) seconds
+Feeding Examples...
+    Positive( 580 ), Negative( 820 )
+
+Step 1 of 4: Loading Labeled Examples
+Examples Loaded: Positive(580), Negative(820)
+Done
+
+Feeding Examples...Done. Took (0) seconds
+Training Started...
+
+Step 2 of 4: Generating a Pool of Weak Classifiers
+	Using Hands data: Yes
+	Using Skeleton data : Yes
+	 1/38 - Feature: DiffPositionX (51)
+	 2/38 - Feature: DiffPositionY (106)
+	 3/38 - Feature: DiffPositionZ (178)
+	 4/38 - Feature: Angles (2716)
+	 5/38 - Feature: TimeSpaceAngles (246)
+	 6/38 - Feature: Speed (158)
+	 7/38 - Feature: VelocityX (101)
+	 8/38 - Feature: VelocityY (122)
+	 9/38 - Feature: VelocityZ (181)
+	10/38 - Feature: AngleVelocity (366)
+	11/38 - Feature: AngleAcceleration (383)
+	12/38 - Feature: MuscleForceX (102)
+	13/38 - Feature: MuscleForceY (122)
+	14/38 - Feature: MuscleForceZ (91)
+	15/38 - Feature: MuscleTorqueX (331)
+	16/38 - Feature: MuscleTorqueY (26)
+	17/38 - Feature: MuscleTorqueZ (247)
+	18/38 - Feature: MusclePower (153)
+	19/38 - Feature: DiffMuscleForceX (315)
+	20/38 - Feature: DiffMuscleForceY (233)
+	21/38 - Feature: DiffMuscleForceZ (501)
+	22/38 - Feature: VelocityX^2 (63)
+	23/38 - Feature: VelocityY^2 (68)
+	24/38 - Feature: VelocityZ^2 (73)
+	25/38 - Feature: Speed^2 (101)
+	26/38 - Feature: Acceleration (93)
+	27/38 - Feature: AccelerationX (26)
+	28/38 - Feature: AccelerationY (37)
+	29/38 - Feature: AccelerationZ (52)
+	30/38 - Feature: BoneLengthChanges (367)
+	31/38 - Feature: HandValueRaw (896)
+	32/38 - Feature: HandValueMultiClass (578)
+	33/38 - Feature: HandDifferenceRawBest (399)
+	34/38 - Feature: HandDifferenceMultiClassBest (349)
+	35/38 - Feature: HandDifferenceRaw (865)
+	36/38 - Feature: HandDifferenceMultiClass (1117)
+	37/38 - Feature: RefinementWrist (9)
+	38/38 - Feature: RefinmentHand (62)
+	Total Classifiers Combined: 11884
+	Num weak classifiers generated: 11884
+	Duration: 0 minutes, 13 seconds
+Done
+
+
+Step 3 of 4: Training Strong Classifier
+	-Evaluating classifier data for each example skeleton frame...
+Done
+	-Running AdaBoost using 8 (of 8 available) hardware threads...
+Done
+	Num weak classifiers: 1000
+	Duration: 0 minutes, 1 seconds
+
+
+Step 4 of 4: Optimizing detection parameters
+	-Generate matrix of test results using different detection parameters...
+	Filtering 7 frames using detection threshold 0.049000
+	Duration: 0 minutes, 0 seconds
+Done
+
+
+Testing on Training Data
+    Raw Per Frame Results:
+	% Accuracy True Positives: 100.000000 % (580/580)
+	% Error False Positives: 0.000000 % (0/816)
+    Filtered Per Gesture Results:
+	% Accuracy True Positives: 100.000000 % (10/10)
+	% Error False Positives: 0.000000 % (0/10)
+
+Top 10 contributing weak classifiers:
+	Angles( SpineMid, Head, ThumbLeft ) using inferred joints, fValue >= 98.000000, alpha = 2.467237
+	HandDifferenceRawBest( Right, CLOSED ) using inferred joints, fValue >= 0.560000, alpha = 2.042440
+	Angles( SpineMid, Head, HandLeft ) using inferred joints, fValue >= 104.000000, alpha = 1.451804
+	HandDifferenceRaw( Left, CLOSED, LASSO ) rejecting inferred joints, fValue >= 0.570000, alpha = 1.427933
+	Angles( Head, ShoulderLeft, HandLeft ) using inferred joints, fValue < 80.000000, alpha = 1.350464
+	Angles( Head, ShoulderLeft, HandLeft ) rejecting inferred joints, fValue < 80.000000, alpha = 1.348081
+	Angles( SpineMid, Head, HandRight ) rejecting inferred joints, fValue >= 100.000000, alpha = 1.315578
+	HandDifferenceRawBest( Left, CLOSED ) using inferred joints, fValue >= 0.560000, alpha = 1.278119
+	HandValueRaw( Right, CLOSED ) using inferred joints, fValue >= 0.610000, alpha = 1.268695
+	HandDifferenceRaw( Left, CLOSED, LASSO ) using inferred joints, fValue >= 0.590000, alpha = 1.266848
+
+Done
+
+Training...Done. Took (15) seconds
+Saving Gesture...
+Saving Gesture...Done. Took (0) seconds
+BUILD: Starting trainer C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Tools\KinectStudio\AdaBoostTech.dll
+Starting Training for: CrossedArms( CrossedArms )
+Training: Job(CrossedArms), Tag (CrossedArms), ProjectFile (C:\Users\fouad.hannoun\AppData\Local\Temp\l5bvpjkm.a3y\ovzgo45p.g5w), InputDatabase (C:\Users\fouad.hannoun\AppData\Local\Temp\tmp90A9.tmp_Database)
+Nothing changed from last build. Using last built training datbase.
+BUILD: Starting trainer C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Tools\KinectStudio\AdaBoostTech.dll
+Starting Training for: HandOnHead_Left( HandOnHead_Left )
+Training: Job(HandOnHead_Left), Tag (HandOnHead_Left), ProjectFile (C:\Users\fouad.hannoun\AppData\Local\Temp\elhh1vm2.1p5\msvwiupz.3we), InputDatabase (C:\Users\fouad.hannoun\AppData\Local\Temp\tmp90A9.tmp_Database)
+	Training Parameters for Tag: <(null)>
+		Data Streams:
+			Use Hands Data: No
+			Use Skeleton Data: Yes
+		Joints:
+			Ignore Left Arm: No
+			Ignore Right Arm: No
+			Ignore Lower Body: Yes
+			Effective Joint Mask: 0xfffffffffff11fff
+			Effective Hand Mask: 0x0
+			Excluded: KneeLeft, AnkleLeft, FootLeft, KneeRight, AnkleRight, FootRight
+			Included: SpineBase, SpineMid, Neck, Head, ShoulderLeft, ElbowLeft, WristLeft, HandLeft, ShoulderRight, ElbowRight, WristRight, HandRight, HipLeft, HipRight, SpineShoulder, HandTipLeft, ThumbLeft, HandTipRight, ThumbRight
+		Features:
+			Effective Feature Mask: 0xffffffc03fffffff
+Generating labeled Examples...
+	Processing (1/2):E:\FYP Fouad\Repository\Sadness Gestures\HandOnHeadLeft.xef
+	-Duplicating examples and mirroring labels...
+	Processing (2/2):E:\FYP Fouad\Repository\Sadness Gestures\HandOnHeadLeft2.xef
+	-Duplicating examples and mirroring labels...
+
+Duration: 0 hours, 0 minutes, 21 seconds
+Num Labeled Examples: 1579
+Ratio positive to negative labeled examples: 1.0 : 4.540351
+Total Num Gestures: 20
+Num Gestures Labeled as HandOnHead_Left: 6
+Ratio HandOnHead_Left to all other gestures: 1.0 : 2.333333
+
+Done
+
+Generating labeled Examples...Done. Took (21) seconds
+Feeding Examples...
+    Positive( 285 ), Negative( 1294 )
+
+Step 1 of 4: Loading Labeled Examples
+Examples Loaded: Positive(285), Negative(1294)
+Done
+
+Feeding Examples...Done. Took (0) seconds
+Training Started...
+
+Step 2 of 4: Generating a Pool of Weak Classifiers
+	Using Hands data: No
+	Using Skeleton data : Yes
+	 1/38 - Feature: DiffPositionX (79)
+	 2/38 - Feature: DiffPositionY (109)
+	 3/38 - Feature: DiffPositionZ (105)
+	 4/38 - Feature: Angles (1642)
+	 5/38 - Feature: TimeSpaceAngles (301)
+	 6/38 - Feature: Speed (123)
+	 7/38 - Feature: VelocityX (165)
+	 8/38 - Feature: VelocityY (164)
+	 9/38 - Feature: VelocityZ (144)
+	10/38 - Feature: AngleVelocity (444)
+	11/38 - Feature: AngleAcceleration (539)
+	12/38 - Feature: MuscleForceX (66)
+	13/38 - Feature: MuscleForceY (106)
+	14/38 - Feature: MuscleForceZ (104)
+	15/38 - Feature: MuscleTorqueX (313)
+	16/38 - Feature: MuscleTorqueY (53)
+	17/38 - Feature: MuscleTorqueZ (185)
+	18/38 - Feature: MusclePower (102)
+	19/38 - Feature: DiffMuscleForceX (457)
+	20/38 - Feature: DiffMuscleForceY (325)
+	21/38 - Feature: DiffMuscleForceZ (603)
+	22/38 - Feature: VelocityX^2 (66)
+	23/38 - Feature: VelocityY^2 (86)
+	24/38 - Feature: VelocityZ^2 (59)
+	25/38 - Feature: Speed^2 (95)
+	26/38 - Feature: Acceleration (90)
+	27/38 - Feature: AccelerationX (67)
+	28/38 - Feature: AccelerationY (57)
+	29/38 - Feature: AccelerationZ (73)
+	30/38 - Feature: BoneLengthChanges (318)
+	31/38 - Feature: HandValueRaw (Excluded)
+	32/38 - Feature: HandValueMultiClass (Excluded)
+	33/38 - Feature: HandDifferenceRawBest (Excluded)
+	34/38 - Feature: HandDifferenceMultiClassBest (Excluded)
+	35/38 - Feature: HandDifferenceRaw (Excluded)
+	36/38 - Feature: HandDifferenceMultiClass (Excluded)
+	37/38 - Feature: RefinementWrist (Excluded)
+	38/38 - Feature: RefinmentHand (Excluded)
+	Total Classifiers Combined: 7040
+	Num weak classifiers generated: 7040
+	Duration: 0 minutes, 8 seconds
+Done
+
+
+Step 3 of 4: Training Strong Classifier
+	-Evaluating classifier data for each example skeleton frame...
+Done
+	-Running AdaBoost using 8 (of 8 available) hardware threads...
+Done
+	Num weak classifiers: 1000
+	Duration: 0 minutes, 1 seconds
+
+
+Step 4 of 4: Optimizing detection parameters
+	-Generate matrix of test results using different detection parameters...
+	Filtering 7 frames using detection threshold 0.049000
+	Duration: 0 minutes, 0 seconds
+Done
+
+
+Testing on Training Data
+    Raw Per Frame Results:
+	% Accuracy True Positives: 100.000000 % (283/283)
+	% Error False Positives: 0.000000 % (0/1292)
+    Filtered Per Gesture Results:
+	% Accuracy True Positives: 100.000000 % (2/2)
+	% Error False Positives: 0.000000 % (0/2)
+
+Top 10 contributing weak classifiers:
+	MuscleTorqueZ( ShoulderLeft ) rejecting inferred joints, fValue < -0.000003, alpha = 1.885683
+	Angles( Head, ShoulderLeft, ElbowLeft ) using inferred joints, fValue < 136.000000, alpha = 1.689908
+	Angles( HandLeft, WristLeft, ElbowLeft ) using inferred joints, fValue >= 144.000000, alpha = 1.593995
+	Angles( SpineMid, Head, HandTipLeft ) using inferred joints, fValue >= 40.000000, alpha = 1.456943
+	Angles( HandTipLeft, HandLeft, WristLeft ) using inferred joints, fValue >= 134.000000, alpha = 1.380154
+	Angles( SpineMid, Head, ShoulderLeft ) using inferred joints, fValue >= 40.000000, alpha = 1.299741
+	DiffPositionZ( ElbowLeft, HipLeft ) using inferred joints, fValue < 0.000000, alpha = 1.267332
+	Angles( Head, ShoulderLeft, ElbowLeft ) rejecting inferred joints, fValue < 136.000000, alpha = 1.186339
+	MuscleTorqueX( HipRight ) using inferred joints, fValue < -0.200003, alpha = 1.151454
+	MuscleTorqueX( HandLeft ) rejecting inferred joints, fValue >= 0.199997, alpha = 1.107536
+
+Done
+
+Training...Done. Took (10) seconds
+Saving Gesture...
+Saving Gesture...Done. Took (0) seconds
+BUILD: Starting trainer C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Tools\KinectStudio\AdaBoostTech.dll
+Starting Training for: HandOnHead_Right( HandOnHead_Right )
+Training: Job(HandOnHead_Right), Tag (HandOnHead_Right), ProjectFile (C:\Users\fouad.hannoun\AppData\Local\Temp\11zvvbnl.er0\xynp4cdv.dzs), InputDatabase (C:\Users\fouad.hannoun\AppData\Local\Temp\tmp90A9.tmp_Database)
+Nothing changed from last build. Using last built training datbase.
+BUILD: Starting trainer C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Tools\KinectStudio\AdaBoostTech.dll
+Starting Training for: HandOnNeck_Left( HandOnNeck_Left )
+Training: Job(HandOnNeck_Left), Tag (HandOnNeck_Left), ProjectFile (C:\Users\fouad.hannoun\AppData\Local\Temp\2wy0mmll.hrs\2zhdaj2b.2i0), InputDatabase (C:\Users\fouad.hannoun\AppData\Local\Temp\tmp90A9.tmp_Database)
+	Training Parameters for Tag: <(null)>
+		Data Streams:
+			Use Hands Data: No
+			Use Skeleton Data: Yes
+		Joints:
+			Ignore Left Arm: No
+			Ignore Right Arm: No
+			Ignore Lower Body: Yes
+			Effective Joint Mask: 0xfffffffffff11fff
+			Effective Hand Mask: 0x0
+			Excluded: KneeLeft, AnkleLeft, FootLeft, KneeRight, AnkleRight, FootRight
+			Included: SpineBase, SpineMid, Neck, Head, ShoulderLeft, ElbowLeft, WristLeft, HandLeft, ShoulderRight, ElbowRight, WristRight, HandRight, HipLeft, HipRight, SpineShoulder, HandTipLeft, ThumbLeft, HandTipRight, ThumbRight
+		Features:
+			Effective Feature Mask: 0xffffffc03fffffff
+Generating labeled Examples...
+	Processing (1/1):E:\FYP Fouad\Repository\Sadness Gestures\HandOnNeckLeft.xef
+	-Duplicating examples and mirroring labels...
+
+Duration: 0 hours, 0 minutes, 14 seconds
+Num Labeled Examples: 1148
+Ratio positive to negative labeled examples: 1.0 : 3.666667
+Total Num Gestures: 8
+Num Gestures Labeled as HandOnNeck_Left: 3
+Ratio HandOnNeck_Left to all other gestures: 1.0 : 1.666667
+
+Done
+
+Generating labeled Examples...Done. Took (14) seconds
+Feeding Examples...
+    Positive( 246 ), Negative( 902 )
+
+Step 1 of 4: Loading Labeled Examples
+Examples Loaded: Positive(246), Negative(902)
+Done
+
+Feeding Examples...Done. Took (0) seconds
+Training Started...
+
+Step 2 of 4: Generating a Pool of Weak Classifiers
+	Using Hands data: No
+	Using Skeleton data : Yes
+	 1/38 - Feature: DiffPositionX (107)
+	 2/38 - Feature: DiffPositionY (187)
+	 3/38 - Feature: DiffPositionZ (237)
+	 4/38 - Feature: Angles (2330)
+	 5/38 - Feature: TimeSpaceAngles (501)
+	 6/38 - Feature: Speed (211)
+	 7/38 - Feature: VelocityX (177)
+	 8/38 - Feature: VelocityY (210)
+	 9/38 - Feature: VelocityZ (289)
+	10/38 - Feature: AngleVelocity (919)
+	11/38 - Feature: AngleAcceleration (1048)
+	12/38 - Feature: MuscleForceX (116)
+	13/38 - Feature: MuscleForceY (179)
+	14/38 - Feature: MuscleForceZ (123)
+	15/38 - Feature: MuscleTorqueX (591)
+	16/38 - Feature: MuscleTorqueY (80)
+	17/38 - Feature: MuscleTorqueZ (307)
+	18/38 - Feature: MusclePower (98)
+	19/38 - Feature: DiffMuscleForceX (916)
+	20/38 - Feature: DiffMuscleForceY (608)
+	21/38 - Feature: DiffMuscleForceZ (989)
+	22/38 - Feature: VelocityX^2 (72)
+	23/38 - Feature: VelocityY^2 (93)
+	24/38 - Feature: VelocityZ^2 (119)
+	25/38 - Feature: Speed^2 (103)
+	26/38 - Feature: Acceleration (96)
+	27/38 - Feature: AccelerationX (52)
+	28/38 - Feature: AccelerationY (70)
+	29/38 - Feature: AccelerationZ (87)
+	30/38 - Feature: BoneLengthChanges (604)
+	31/38 - Feature: HandValueRaw (Excluded)
+	32/38 - Feature: HandValueMultiClass (Excluded)
+	33/38 - Feature: HandDifferenceRawBest (Excluded)
+	34/38 - Feature: HandDifferenceMultiClassBest (Excluded)
+	35/38 - Feature: HandDifferenceRaw (Excluded)
+	36/38 - Feature: HandDifferenceMultiClass (Excluded)
+	37/38 - Feature: RefinementWrist (Excluded)
+	38/38 - Feature: RefinmentHand (Excluded)
+	Total Classifiers Combined: 11519
+	Num weak classifiers generated: 11519
+	Duration: 0 minutes, 12 seconds
+Done
+
+
+Step 3 of 4: Training Strong Classifier
+	-Evaluating classifier data for each example skeleton frame...
+Done
+	-Running AdaBoost using 8 (of 8 available) hardware threads...
+Done
+	Num weak classifiers: 1000
+	Duration: 0 minutes, 1 seconds
+
+
+Step 4 of 4: Optimizing detection parameters
+	-Generate matrix of test results using different detection parameters...
+	Filtering 7 frames using detection threshold 0.049000
+	Duration: 0 minutes, 0 seconds
+Done
+
+
+Testing on Training Data
+    Raw Per Frame Results:
+	% Accuracy True Positives: 100.000000 % (246/246)
+	% Error False Positives: 0.000000 % (0/898)
+    Filtered Per Gesture Results:
+	% Accuracy True Positives: 100.000000 % (1/1)
+	% Error False Positives: 0.000000 % (0/1)
+
+Top 10 contributing weak classifiers:
+	MuscleTorqueZ( HipLeft ) using inferred joints, fValue >= 0.599997, alpha = 2.094138
+	Angles( Head, ShoulderLeft, HandLeft ) using inferred joints, fValue < 30.000000, alpha = 1.991396
+	Angles( Head, ShoulderRight, SpineBase ) using inferred joints, fValue >= 120.000000, alpha = 1.935601
+	Angles( Head, ShoulderLeft, WristLeft ) using inferred joints, fValue < 34.000000, alpha = 1.596063
+	Angles( Head, ShoulderLeft, ThumbLeft ) using inferred joints, fValue < 18.000000, alpha = 1.576829
+	MuscleTorqueX( ShoulderRight ) using inferred joints, fValue < -0.700003, alpha = 1.563270
+	MuscleTorqueZ( Neck ) using inferred joints, fValue < -0.100003, alpha = 1.553032
+	Angles( SpineMid, Head, WristLeft ) rejecting inferred joints, fValue >= 66.000000, alpha = 1.462721
+	Angles( Head, ShoulderLeft, HandTipLeft ) using inferred joints, fValue < 22.000000, alpha = 1.429397
+	Angles( SpineMid, Head, ThumbLeft ) using inferred joints, fValue >= 96.000000, alpha = 1.420607
+
+Done
+
+Training...Done. Took (14) seconds
+Saving Gesture...
+Saving Gesture...Done. Took (0) seconds
+BUILD: Starting trainer C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Tools\KinectStudio\AdaBoostTech.dll
+Starting Training for: HandOnNeck_Right( HandOnNeck_Right )
+Training: Job(HandOnNeck_Right), Tag (HandOnNeck_Right), ProjectFile (C:\Users\fouad.hannoun\AppData\Local\Temp\iajibbvp.rek\rzkqvcsq.ak0), InputDatabase (C:\Users\fouad.hannoun\AppData\Local\Temp\tmp90A9.tmp_Database)
+Nothing changed from last build. Using last built training datbase.
+BUILD: Starting trainer C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Tools\KinectStudio\AdaBoostTech.dll
+Starting Training for: HandsBehindHead( HandsBehindHead )
+Training: Job(HandsBehindHead), Tag (HandsBehindHead), ProjectFile (C:\Users\fouad.hannoun\AppData\Local\Temp\4xbdeic2.aoo\knex2fhx.4fp), InputDatabase (C:\Users\fouad.hannoun\AppData\Local\Temp\tmp90A9.tmp_Database)
+	Training Parameters for Tag: <(null)>
+		Data Streams:
+			Use Hands Data: No
+			Use Skeleton Data: Yes
+		Joints:
+			Ignore Left Arm: No
+			Ignore Right Arm: No
+			Ignore Lower Body: Yes
+			Effective Joint Mask: 0xfffffffffff11fff
+			Effective Hand Mask: 0x0
+			Excluded: KneeLeft, AnkleLeft, FootLeft, KneeRight, AnkleRight, FootRight
+			Included: SpineBase, SpineMid, Neck, Head, ShoulderLeft, ElbowLeft, WristLeft, HandLeft, ShoulderRight, ElbowRight, WristRight, HandRight, HipLeft, HipRight, SpineShoulder, HandTipLeft, ThumbLeft, HandTipRight, ThumbRight
+		Features:
+			Effective Feature Mask: 0xffffffc03fffffff
+Generating labeled Examples...
+WARNING: Project property ("Duplicate And Mirror Data During Training") is set, but the project name does not contain _LEFT or _RIGHT. Mirroring samples with the same tag.
+	Processing (1/1):E:\FYP Fouad\Repository\Sadness Gestures\HandsBehindHead.xef
+	-Duplicating examples and mirroring labels...
+
+Duration: 0 hours, 0 minutes, 14 seconds
+Num Labeled Examples: 1664
+Ratio positive to negative labeled examples: 1.0 : 0.8612975
+Total Num Gestures: 4
+Num Gestures Labeled as HandsBehindHead: 2
+Ratio HandsBehindHead to all other gestures: 1.0 : 1
+
+Done
+
+Generating labeled Examples...Done. Took (14) seconds
+Feeding Examples...
+    Positive( 894 ), Negative( 770 )
+
+Step 1 of 4: Loading Labeled Examples
+Examples Loaded: Positive(894), Negative(770)
+Done
+
+Feeding Examples...Done. Took (0) seconds
+Training Started...
+
+Step 2 of 4: Generating a Pool of Weak Classifiers
+	Using Hands data: No
+	Using Skeleton data : Yes
+	 1/38 - Feature: DiffPositionX (140)
+	 2/38 - Feature: DiffPositionY (152)
+	 3/38 - Feature: DiffPositionZ (169)
+	 4/38 - Feature: Angles (1782)
+	 5/38 - Feature: TimeSpaceAngles (271)
+	 6/38 - Feature: Speed (187)
+	 7/38 - Feature: VelocityX (152)
+	 8/38 - Feature: VelocityY (116)
+	 9/38 - Feature: VelocityZ (253)
+	10/38 - Feature: AngleVelocity (605)
+	11/38 - Feature: AngleAcceleration (657)
+	12/38 - Feature: MuscleForceX (66)
+	13/38 - Feature: MuscleForceY (166)
+	14/38 - Feature: MuscleForceZ (104)
+	15/38 - Feature: MuscleTorqueX (262)
+	16/38 - Feature: MuscleTorqueY (77)
+	17/38 - Feature: MuscleTorqueZ (254)
+	18/38 - Feature: MusclePower (114)
+	19/38 - Feature: DiffMuscleForceX (453)
+	20/38 - Feature: DiffMuscleForceY (583)
+	21/38 - Feature: DiffMuscleForceZ (550)
+	22/38 - Feature: VelocityX^2 (40)
+	23/38 - Feature: VelocityY^2 (42)
+	24/38 - Feature: VelocityZ^2 (93)
+	25/38 - Feature: Speed^2 (86)
+	26/38 - Feature: Acceleration (107)
+	27/38 - Feature: AccelerationX (66)
+	28/38 - Feature: AccelerationY (45)
+	29/38 - Feature: AccelerationZ (92)
+	30/38 - Feature: BoneLengthChanges (479)
+	31/38 - Feature: HandValueRaw (Excluded)
+	32/38 - Feature: HandValueMultiClass (Excluded)
+	33/38 - Feature: HandDifferenceRawBest (Excluded)
+	34/38 - Feature: HandDifferenceMultiClassBest (Excluded)
+	35/38 - Feature: HandDifferenceRaw (Excluded)
+	36/38 - Feature: HandDifferenceMultiClass (Excluded)
+	37/38 - Feature: RefinementWrist (Excluded)
+	38/38 - Feature: RefinmentHand (Excluded)
+	Total Classifiers Combined: 8163
+	Num weak classifiers generated: 8163
+	Duration: 0 minutes, 11 seconds
+Done
+
+
+Step 3 of 4: Training Strong Classifier
+	-Evaluating classifier data for each example skeleton frame...
+Done
+	-Running AdaBoost using 8 (of 8 available) hardware threads...
+Done
+	Num weak classifiers: 1000
+	Duration: 0 minutes, 1 seconds
+
+
+Step 4 of 4: Optimizing detection parameters
+	-Generate matrix of test results using different detection parameters...
+	Filtering 7 frames using detection threshold 0.049000
+	Duration: 0 minutes, 0 seconds
+Done
+
+
+Testing on Training Data
+    Raw Per Frame Results:
+	% Accuracy True Positives: 100.000000 % (894/894)
+	% Error False Positives: 0.000000 % (0/766)
+    Filtered Per Gesture Results:
+	% Accuracy True Positives: 100.000000 % (2/2)
+	% Error False Positives: 0.000000 % (0/2)
+
+Top 10 contributing weak classifiers:
+	DiffPositionZ( WristRight, ShoulderRight ) using inferred joints, fValue >= 0.000000, alpha = 3.851052
+	DiffPositionY( ElbowRight, ShoulderLeft ) using inferred joints, fValue >= 0.000000, alpha = 3.773713
+	DiffPositionZ( WristLeft, ShoulderLeft ) using inferred joints, fValue >= 0.000000, alpha = 3.504704
+	DiffPositionZ( HandRight, ShoulderRight ) using inferred joints, fValue >= 0.000000, alpha = 3.361315
+	Angles( Head, ShoulderLeft, HandLeft ) using inferred joints, fValue < 48.000000, alpha = 2.424436
+	DiffPositionZ( WristRight, ShoulderLeft ) using inferred joints, fValue >= 0.000000, alpha = 2.233550
+	Angles( Head, ShoulderRight, ThumbRight ) using inferred joints, fValue < 48.000000, alpha = 2.189715
+	DiffPositionZ( HandRight, SpineShoulder ) using inferred joints, fValue >= 0.000000, alpha = 2.120169
+	BoneLengthChanges( HandLeft, HandRight ) rejecting inferred joints, fValue < 0.710000, alpha = 2.079863
+	DiffPositionZ( Head, HandTipLeft ) using inferred joints, fValue < 0.000000, alpha = 2.038680
+
+Done
+
+Training...Done. Took (13) seconds
+Saving Gesture...
+Saving Gesture...Done. Took (0) seconds
+BUILD: Starting trainer C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Tools\KinectStudio\AdaBoostTech.dll
+Starting Training for: HandsOnKnees( HandsOnKnees )
+Training: Job(HandsOnKnees), Tag (HandsOnKnees), ProjectFile (C:\Users\fouad.hannoun\AppData\Local\Temp\edxnhhab.ofk\fsq0wowi.0ei), InputDatabase (C:\Users\fouad.hannoun\AppData\Local\Temp\tmp90A9.tmp_Database)
+Nothing changed from last build. Using last built training datbase.
+BUILD: Starting trainer C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Tools\KinectStudio\AdaBoostTech.dll
+Starting Training for: HeadBackward( HeadBackward )
+Training: Job(HeadBackward), Tag (HeadBackward), ProjectFile (C:\Users\fouad.hannoun\AppData\Local\Temp\vuijhhsx.vxg\nhq3c0x1.jzm), InputDatabase (C:\Users\fouad.hannoun\AppData\Local\Temp\tmp90A9.tmp_Database)
+Nothing changed from last build. Using last built training datbase.
+BUILD: Starting trainer C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Tools\KinectStudio\AdaBoostTech.dll
+Starting Training for: HeadBentForward( HeadBentForward )
+Training: Job(HeadBentForward), Tag (HeadBentForward), ProjectFile (C:\Users\fouad.hannoun\AppData\Local\Temp\2jexf2fz.lad\2ddhl0kq.dbg), InputDatabase (C:\Users\fouad.hannoun\AppData\Local\Temp\tmp90A9.tmp_Database)
+	Training Parameters for Tag: <(null)>
+		Data Streams:
+			Use Hands Data: No
+			Use Skeleton Data: Yes
+		Joints:
+			Ignore Left Arm: Yes
+			Ignore Right Arm: Yes
+			Ignore Lower Body: Yes
+			Effective Joint Mask: 0xfffffffffe11111f
+			Effective Hand Mask: 0x0
+			Excluded: ElbowLeft, WristLeft, HandLeft, ElbowRight, WristRight, HandRight, KneeLeft, AnkleLeft, FootLeft, KneeRight, AnkleRight, FootRight, HandTipLeft, ThumbLeft, HandTipRight, ThumbRight
+			Included: SpineBase, SpineMid, Neck, Head, ShoulderLeft, ShoulderRight, HipLeft, HipRight, SpineShoulder
+		Features:
+			Effective Feature Mask: 0xffffffc03fffffff
+Generating labeled Examples...
+WARNING: Project property ("Duplicate And Mirror Data During Training") is set, but the project name does not contain _LEFT or _RIGHT. Mirroring samples with the same tag.
+	Processing (1/1):E:\FYP Fouad\Repository\Sadness Gestures\HeadForward.xef
+	-Duplicating examples and mirroring labels...
+
+Duration: 0 hours, 0 minutes, 28 seconds
+Num Labeled Examples: 2834
+Ratio positive to negative labeled examples: 1.0 : 1.66855
+Total Num Gestures: 26
+Num Gestures Labeled as HeadBentForward: 14
+Ratio HeadBentForward to all other gestures: 1.0 : 0.8571429
+
+Done
+
+Generating labeled Examples...Done. Took (28) seconds
+Feeding Examples...
+    Positive( 1062 ), Negative( 1772 )
+
+Step 1 of 4: Loading Labeled Examples
+Examples Loaded: Positive(1062), Negative(1772)
+Done
+
+Feeding Examples...Done. Took (0) seconds
+Training Started...
+
+Step 2 of 4: Generating a Pool of Weak Classifiers
+	Using Hands data: No
+	Using Skeleton data : Yes
+	 1/38 - Feature: DiffPositionX (1)
+	 2/38 - Feature: DiffPositionY (1)
+	 3/38 - Feature: DiffPositionZ (7)
+	 4/38 - Feature: Angles (205)
+	 5/38 - Feature: TimeSpaceAngles (72)
+	 6/38 - Feature: Speed (14)
+	 7/38 - Feature: VelocityX (8)
+	 8/38 - Feature: VelocityY (16)
+	 9/38 - Feature: VelocityZ (19)
+	10/38 - Feature: AngleVelocity (42)
+	11/38 - Feature: AngleAcceleration (47)
+	12/38 - Feature: MuscleForceX (1)
+	13/38 - Feature: MuscleForceY (19)
+	14/38 - Feature: MuscleForceZ (2)
+	15/38 - Feature: MuscleTorqueX (125)
+	16/38 - Feature: MuscleTorqueY (13)
+	17/38 - Feature: MuscleTorqueZ (50)
+	18/38 - Feature: MusclePower (6)
+	19/38 - Feature: DiffMuscleForceX (23)
+	20/38 - Feature: DiffMuscleForceY (23)
+	21/38 - Feature: DiffMuscleForceZ (70)
+	22/38 - Feature: VelocityX^2 (1)
+	23/38 - Feature: VelocityY^2 (1)
+	24/38 - Feature: VelocityZ^2 (5)
+	25/38 - Feature: Speed^2 (5)
+	26/38 - Feature: Acceleration (4)
+	27/38 - Feature: AccelerationX (4)
+	28/38 - Feature: AccelerationY (4)
+	29/38 - Feature: AccelerationZ (12)
+	30/38 - Feature: BoneLengthChanges (23)
+	31/38 - Feature: HandValueRaw (Excluded)
+	32/38 - Feature: HandValueMultiClass (Excluded)
+	33/38 - Feature: HandDifferenceRawBest (Excluded)
+	34/38 - Feature: HandDifferenceMultiClassBest (Excluded)
+	35/38 - Feature: HandDifferenceRaw (Excluded)
+	36/38 - Feature: HandDifferenceMultiClass (Excluded)
+	37/38 - Feature: RefinementWrist (Excluded)
+	38/38 - Feature: RefinmentHand (Excluded)
+	Total Classifiers Combined: 823
+	Num weak classifiers generated: 823
+	Duration: 0 minutes, 3 seconds
+Done
+
+
+Step 3 of 4: Training Strong Classifier
+	-Evaluating classifier data for each example skeleton frame...
+Done
+	-Running AdaBoost using 8 (of 8 available) hardware threads...
+Done
+	Num weak classifiers: 560
+	Duration: 0 minutes, 0 seconds
+
+
+Step 4 of 4: Optimizing detection parameters
+	-Generate matrix of test results using different detection parameters...
+	Filtering 7 frames using detection threshold 0.049000
+	Duration: 0 minutes, 0 seconds
+Done
+
+
+Testing on Training Data
+    Raw Per Frame Results:
+	% Accuracy True Positives: 100.000000 % (1062/1062)
+	% Error False Positives: 0.000000 % (0/1768)
+    Filtered Per Gesture Results:
+	% Accuracy True Positives: 100.000000 % (12/12)
+	% Error False Positives: 0.000000 % (0/12)
+
+Top 10 contributing weak classifiers:
+	Angles( SpineMid, Head, HipLeft ) rejecting inferred joints, fValue < 12.000000, alpha = 1.113290
+	MuscleTorqueX( Neck ) using inferred joints, fValue < -0.100003, alpha = 0.847130
+	Angles( SpineMid, Head, Neck ) using inferred joints, fValue >= 10.000000, alpha = 0.661450
+	Angles( Head, ShoulderRight, SpineBase ) using inferred joints, fValue < 116.000000, alpha = 0.661292
+	VelocityZ( Neck ) using inferred joints, fValue < -0.000003, alpha = 0.600949
+	Angles( Head, ShoulderLeft, SpineBase ) using inferred joints, fValue < 116.000000, alpha = 0.581850
+	Angles( Head, ShoulderLeft, SpineShoulder ) using inferred joints, fValue < 36.000000, alpha = 0.482640
+	Angles( SpineMid, Head, SpineShoulder ) using inferred joints, fValue >= 6.000000, alpha = 0.476739
+	MuscleTorqueX( HipLeft ) using inferred joints, fValue >= 2.799997, alpha = 0.475256
+	DiffPositionZ( Head, Neck ) using inferred joints, fValue < 0.000000, alpha = 0.457524
+
+Done
+
+Training...Done. Took (4) seconds
+Saving Gesture...
+Saving Gesture...Done. Took (0) seconds
+BUILD: Starting trainer C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Tools\KinectStudio\AdaBoostTech.dll
+Starting Training for: HeadOnHand_Left( HeadOnHand_Left )
+Training: Job(HeadOnHand_Left), Tag (HeadOnHand_Left), ProjectFile (C:\Users\fouad.hannoun\AppData\Local\Temp\h1dsi0h2.5q0\zfjmqi3o.kuk), InputDatabase (C:\Users\fouad.hannoun\AppData\Local\Temp\tmp90A9.tmp_Database)
+Nothing changed from last build. Using last built training datbase.
+BUILD: Starting trainer C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Tools\KinectStudio\AdaBoostTech.dll
+Starting Training for: HeadOnHand_Right( HeadOnHand_Right )
+Training: Job(HeadOnHand_Right), Tag (HeadOnHand_Right), ProjectFile (C:\Users\fouad.hannoun\AppData\Local\Temp\qulgnr3e.xu0\u2wwojvr.g3u), InputDatabase (C:\Users\fouad.hannoun\AppData\Local\Temp\tmp90A9.tmp_Database)
+	Training Parameters for Tag: <(null)>
+		Data Streams:
+			Use Hands Data: No
+			Use Skeleton Data: Yes
+		Joints:
+			Ignore Left Arm: No
+			Ignore Right Arm: No
+			Ignore Lower Body: Yes
+			Effective Joint Mask: 0xfffffffffff11fff
+			Effective Hand Mask: 0x0
+			Excluded: KneeLeft, AnkleLeft, FootLeft, KneeRight, AnkleRight, FootRight
+			Included: SpineBase, SpineMid, Neck, Head, ShoulderLeft, ElbowLeft, WristLeft, HandLeft, ShoulderRight, ElbowRight, WristRight, HandRight, HipLeft, HipRight, SpineShoulder, HandTipLeft, ThumbLeft, HandTipRight, ThumbRight
+		Features:
+			Effective Feature Mask: 0xffffffc03fffffff
+Generating labeled Examples...
+	Processing (1/2):E:\FYP Fouad\Repository\Sadness Gestures\HeadOnHand.xef
+	-Duplicating examples and mirroring labels...
+	Processing (2/2):E:\FYP Fouad\Repository\Sadness Gestures\HeadOnHandRight.xef
+	-Duplicating examples and mirroring labels...
+
+Duration: 0 hours, 0 minutes, 43 seconds
+Num Labeled Examples: 4574
+Ratio positive to negative labeled examples: 1.0 : 5.181081
+Total Num Gestures: 24
+Num Gestures Labeled as HeadOnHand_Right: 5
+Ratio HeadOnHand_Right to all other gestures: 1.0 : 3.8
+
+Done
+
+Generating labeled Examples...Done. Took (43) seconds
+Feeding Examples...
+    Positive( 740 ), Negative( 3834 )
+
+Step 1 of 4: Loading Labeled Examples
+Examples Loaded: Positive(740), Negative(3834)
+Done
+
+Feeding Examples...Done. Took (0) seconds
+Training Started...
+
+Step 2 of 4: Generating a Pool of Weak Classifiers
+	Using Hands data: No
+	Using Skeleton data : Yes
+	 1/38 - Feature: DiffPositionX (147)
+	 2/38 - Feature: DiffPositionY (95)
+	 3/38 - Feature: DiffPositionZ (202)
+	 4/38 - Feature: Angles (926)
+	 5/38 - Feature: TimeSpaceAngles (188)
+	 6/38 - Feature: Speed (114)
+	 7/38 - Feature: VelocityX (152)
+	 8/38 - Feature: VelocityY (139)
+	 9/38 - Feature: VelocityZ (128)
+	10/38 - Feature: AngleVelocity (420)
+	11/38 - Feature: AngleAcceleration (449)
+	12/38 - Feature: MuscleForceX (96)
+	13/38 - Feature: MuscleForceY (88)
+	14/38 - Feature: MuscleForceZ (111)
+	15/38 - Feature: MuscleTorqueX (371)
+	16/38 - Feature: MuscleTorqueY (96)
+	17/38 - Feature: MuscleTorqueZ (327)
+	18/38 - Feature: MusclePower (83)
+	19/38 - Feature: DiffMuscleForceX (318)
+	20/38 - Feature: DiffMuscleForceY (306)
+	21/38 - Feature: DiffMuscleForceZ (367)
+	22/38 - Feature: VelocityX^2 (77)
+	23/38 - Feature: VelocityY^2 (72)
+	24/38 - Feature: VelocityZ^2 (102)
+	25/38 - Feature: Speed^2 (109)
+	26/38 - Feature: Acceleration (101)
+	27/38 - Feature: AccelerationX (68)
+	28/38 - Feature: AccelerationY (76)
+	29/38 - Feature: AccelerationZ (63)
+	30/38 - Feature: BoneLengthChanges (290)
+	31/38 - Feature: HandValueRaw (Excluded)
+	32/38 - Feature: HandValueMultiClass (Excluded)
+	33/38 - Feature: HandDifferenceRawBest (Excluded)
+	34/38 - Feature: HandDifferenceMultiClassBest (Excluded)
+	35/38 - Feature: HandDifferenceRaw (Excluded)
+	36/38 - Feature: HandDifferenceMultiClass (Excluded)
+	37/38 - Feature: RefinementWrist (Excluded)
+	38/38 - Feature: RefinmentHand (Excluded)
+	Total Classifiers Combined: 6081
+	Num weak classifiers generated: 6081
+	Duration: 0 minutes, 17 seconds
+Done
+
+
+Step 3 of 4: Training Strong Classifier
+	-Evaluating classifier data for each example skeleton frame...
+Done
+	-Running AdaBoost using 8 (of 8 available) hardware threads...
+Done
+	Num weak classifiers: 1000
+	Duration: 0 minutes, 1 seconds
+
+
+Step 4 of 4: Optimizing detection parameters
+	-Generate matrix of test results using different detection parameters...
+	Filtering 7 frames using detection threshold 0.049000
+	Duration: 0 minutes, 0 seconds
+Done
+
+
+Testing on Training Data
+    Raw Per Frame Results:
+	% Accuracy True Positives: 100.000000 % (740/740)
+	% Error False Positives: 0.000000 % (0/3830)
+    Filtered Per Gesture Results:
+	% Accuracy True Positives: 100.000000 % (4/4)
+	% Error False Positives: 0.000000 % (0/4)
+
+Top 10 contributing weak classifiers:
+	Angles( Head, ShoulderLeft, ThumbLeft ) using inferred joints, fValue >= 134.000000, alpha = 1.245836
+	MuscleTorqueZ( Neck ) using inferred joints, fValue < -0.800003, alpha = 1.141866
+	Angles( Head, ShoulderRight, HandRight ) using inferred joints, fValue < 46.000000, alpha = 1.093121
+	DiffMuscleForceY( WristLeft, SpineMid ) rejecting inferred joints, fValue >= -0.000000, alpha = 0.771094
+	Angles( Head, ShoulderLeft, SpineMid ) using inferred joints, fValue < 92.000000, alpha = 0.714638
+	Angles( SpineMid, Head, WristRight ) using inferred joints, fValue >= 86.000000, alpha = 0.708737
+	DiffPositionZ( ElbowRight, HandLeft ) using inferred joints, fValue < 0.000000, alpha = 0.704711
+	MuscleTorqueZ( Neck ) rejecting inferred joints, fValue < -0.400003, alpha = 0.678161
+	Angles( SpineMid, Head, SpineBase ) using inferred joints, fValue >= 8.000000, alpha = 0.581662
+	Angles( WristLeft, ElbowLeft, ShoulderLeft ) rejecting inferred joints, fValue >= 130.000000, alpha = 0.572349
+
+Done
+
+Training...Done. Took (20) seconds
+Saving Gesture...
+Saving Gesture...Done. Took (0) seconds
+BUILD: Starting trainer C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Tools\KinectStudio\AdaBoostTech.dll
+Starting Training for: ShouldersForward( ShouldersForward )
+Training: Job(ShouldersForward), Tag (ShouldersForward), ProjectFile (C:\Users\fouad.hannoun\AppData\Local\Temp\dhsdeqj1.iaq\znee2vne.vzm), InputDatabase (C:\Users\fouad.hannoun\AppData\Local\Temp\tmp90A9.tmp_Database)
+Nothing changed from last build. Using last built training datbase.
+BUILD: Starting trainer C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Tools\KinectStudio\AdaBoostTech.dll
+Starting Training for: ShouldersRaised( ShouldersRaised )
+Training: Job(ShouldersRaised), Tag (ShouldersRaised), ProjectFile (C:\Users\fouad.hannoun\AppData\Local\Temp\irlo5xhz.m1m\0r4oi3b5.a2l), InputDatabase (C:\Users\fouad.hannoun\AppData\Local\Temp\tmp90A9.tmp_Database)
+	Training Parameters for Tag: <(null)>
+		Data Streams:
+			Use Hands Data: No
+			Use Skeleton Data: Yes
+		Joints:
+			Ignore Left Arm: Yes
+			Ignore Right Arm: Yes
+			Ignore Lower Body: Yes
+			Effective Joint Mask: 0xfffffffffe11111f
+			Effective Hand Mask: 0x0
+			Excluded: ElbowLeft, WristLeft, HandLeft, ElbowRight, WristRight, HandRight, KneeLeft, AnkleLeft, FootLeft, KneeRight, AnkleRight, FootRight, HandTipLeft, ThumbLeft, HandTipRight, ThumbRight
+			Included: SpineBase, SpineMid, Neck, Head, ShoulderLeft, ShoulderRight, HipLeft, HipRight, SpineShoulder
+		Features:
+			Effective Feature Mask: 0xffffffc03fffffff
+Generating labeled Examples...
+WARNING: Project property ("Duplicate And Mirror Data During Training") is set, but the project name does not contain _LEFT or _RIGHT. Mirroring samples with the same tag.
+	Processing (1/1):E:\FYP Fouad\Repository\Sadness Gestures\ShouldersRaised.xef
+	-Duplicating examples and mirroring labels...
+
+Duration: 0 hours, 0 minutes, 17 seconds
+Num Labeled Examples: 1464
+Ratio positive to negative labeled examples: 1.0 : 1.464646
+Total Num Gestures: 28
+Num Gestures Labeled as ShouldersRaised: 10
+Ratio ShouldersRaised to all other gestures: 1.0 : 1.8
+
+Done
+
+Generating labeled Examples...Done. Took (17) seconds
+Feeding Examples...
+    Positive( 594 ), Negative( 870 )
+
+Step 1 of 4: Loading Labeled Examples
+Examples Loaded: Positive(594), Negative(870)
+Done
+
+Feeding Examples...Done. Took (0) seconds
+Training Started...
+
+Step 2 of 4: Generating a Pool of Weak Classifiers
+	Using Hands data: No
+	Using Skeleton data : Yes
+	 1/38 - Feature: DiffPositionX (9)
+	 2/38 - Feature: DiffPositionY (5)
+	 3/38 - Feature: DiffPositionZ (9)
+	 4/38 - Feature: Angles (169)
+	 5/38 - Feature: TimeSpaceAngles (124)
+	 6/38 - Feature: Speed (39)
+	 7/38 - Feature: VelocityX (20)
+	 8/38 - Feature: VelocityY (33)
+	 9/38 - Feature: VelocityZ (50)
+	10/38 - Feature: AngleVelocity (82)
+	11/38 - Feature: AngleAcceleration (76)
+	12/38 - Feature: MuscleForceX (29)
+	13/38 - Feature: MuscleForceY (38)
+	14/38 - Feature: MuscleForceZ (29)
+	15/38 - Feature: MuscleTorqueX (101)
+	16/38 - Feature: MuscleTorqueY (32)
+	17/38 - Feature: MuscleTorqueZ (111)
+	18/38 - Feature: MusclePower (7)
+	19/38 - Feature: DiffMuscleForceX (98)
+	20/38 - Feature: DiffMuscleForceY (16)
+	21/38 - Feature: DiffMuscleForceZ (74)
+	22/38 - Feature: VelocityX^2 (1)
+	23/38 - Feature: VelocityY^2 (1)
+	24/38 - Feature: VelocityZ^2 (27)
+	25/38 - Feature: Speed^2 (25)
+	26/38 - Feature: Acceleration (19)
+	27/38 - Feature: AccelerationX (6)
+	28/38 - Feature: AccelerationY (5)
+	29/38 - Feature: AccelerationZ (12)
+	30/38 - Feature: BoneLengthChanges (29)
+	31/38 - Feature: HandValueRaw (Excluded)
+	32/38 - Feature: HandValueMultiClass (Excluded)
+	33/38 - Feature: HandDifferenceRawBest (Excluded)
+	34/38 - Feature: HandDifferenceMultiClassBest (Excluded)
+	35/38 - Feature: HandDifferenceRaw (Excluded)
+	36/38 - Feature: HandDifferenceMultiClass (Excluded)
+	37/38 - Feature: RefinementWrist (Excluded)
+	38/38 - Feature: RefinmentHand (Excluded)
+	Total Classifiers Combined: 1276
+	Num weak classifiers generated: 1276
+	Duration: 0 minutes, 2 seconds
+Done
+
+
+Step 3 of 4: Training Strong Classifier
+	-Evaluating classifier data for each example skeleton frame...
+Done
+	-Running AdaBoost using 8 (of 8 available) hardware threads...
+Done
+	Num weak classifiers: 1000
+	Duration: 0 minutes, 0 seconds
+
+
+Step 4 of 4: Optimizing detection parameters
+	-Generate matrix of test results using different detection parameters...
+	Filtering 7 frames using detection threshold 0.049000
+	Duration: 0 minutes, 0 seconds
+Done
+
+
+Testing on Training Data
+    Raw Per Frame Results:
+	% Accuracy True Positives: 100.000000 % (592/592)
+	% Error False Positives: 0.000000 % (0/868)
+    Filtered Per Gesture Results:
+	% Accuracy True Positives: 100.000000 % (9/9)
+	% Error False Positives: 0.000000 % (0/9)
+
+Top 10 contributing weak classifiers:
+	Angles( ShoulderLeft, SpineShoulder, ShoulderRight ) using inferred joints, fValue >= 156.000000, alpha = 1.438734
+	MuscleTorqueX( HipLeft ) using inferred joints, fValue >= 3.699996, alpha = 0.706540
+	Angles( SpineMid, Head, Neck ) using inferred joints, fValue < 10.000000, alpha = 0.547798
+	VelocityY( SpineShoulder ) using inferred joints, fValue >= -0.000003, alpha = 0.503077
+	DiffPositionZ( Head, SpineShoulder ) using inferred joints, fValue >= 0.000000, alpha = 0.462896
+	AngleVelocity( ShoulderLeft, SpineShoulder, ShoulderRight ) using inferred joints, fValue >= 0.250000, alpha = 0.445103
+	DiffMuscleForceY( Head, SpineBase ) using inferred joints, fValue >= -0.400000, alpha = 0.439282
+	Angles( ShoulderLeft, SpineShoulder, ShoulderRight ) using inferred joints, fValue >= 154.000000, alpha = 0.436478
+	Angles( ShoulderLeft, SpineShoulder, ShoulderRight ) using inferred joints, fValue >= 158.000000, alpha = 0.413997
+	BoneLengthChanges( Neck, SpineShoulder ) using inferred joints, fValue < 0.999999, alpha = 0.395558
+
+Done
+
+Training...Done. Took (2) seconds
+Saving Gesture...
+Saving Gesture...Done. Took (0) seconds
+BUILD: Starting trainer C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Tools\KinectStudio\AdaBoostTech.dll
+Starting Training for: SpineBackward( SpineBackward )
+Training: Job(SpineBackward), Tag (SpineBackward), ProjectFile (C:\Users\fouad.hannoun\AppData\Local\Temp\t3mnkvqr.eya\1fs4kvml.1jv), InputDatabase (C:\Users\fouad.hannoun\AppData\Local\Temp\tmp90A9.tmp_Database)
+Nothing changed from last build. Using last built training datbase.
+BUILD: Starting trainer C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Tools\KinectStudio\AdaBoostTech.dll
+Starting Training for: SpineForward( SpineForward )
+Training: Job(SpineForward), Tag (SpineForward), ProjectFile (C:\Users\fouad.hannoun\AppData\Local\Temp\2i0ugkfy.azw\hgog3j0d.knj), InputDatabase (C:\Users\fouad.hannoun\AppData\Local\Temp\tmp90A9.tmp_Database)
+	Training Parameters for Tag: <(null)>
+		Data Streams:
+			Use Hands Data: No
+			Use Skeleton Data: Yes
+		Joints:
+			Ignore Left Arm: Yes
+			Ignore Right Arm: Yes
+			Ignore Lower Body: Yes
+			Effective Joint Mask: 0xfffffffffe11111f
+			Effective Hand Mask: 0x0
+			Excluded: ElbowLeft, WristLeft, HandLeft, ElbowRight, WristRight, HandRight, KneeLeft, AnkleLeft, FootLeft, KneeRight, AnkleRight, FootRight, HandTipLeft, ThumbLeft, HandTipRight, ThumbRight
+			Included: SpineBase, SpineMid, Neck, Head, ShoulderLeft, ShoulderRight, HipLeft, HipRight, SpineShoulder
+		Features:
+			Effective Feature Mask: 0xffffffc03fffffff
+Generating labeled Examples...
+WARNING: Project property ("Duplicate And Mirror Data During Training") is set, but the project name does not contain _LEFT or _RIGHT. Mirroring samples with the same tag.
+	Processing (1/2):E:\FYP Fouad\Repository\Sadness Gestures\SpineForward.xef
+	-Duplicating examples and mirroring labels...
+	Processing (2/2):E:\FYP Fouad\Repository\Sadness Gestures\SpineForward2.xef
+	-Duplicating examples and mirroring labels...
+
+Duration: 0 hours, 0 minutes, 36 seconds
+Num Labeled Examples: 3540
+Ratio positive to negative labeled examples: 1.0 : 0.5945946
+Total Num Gestures: 38
+Num Gestures Labeled as SpineForward: 22
+Ratio SpineForward to all other gestures: 1.0 : 0.7272727
+
+Done
+
+Generating labeled Examples...Done. Took (36) seconds
+Feeding Examples...
+    Positive( 2220 ), Negative( 1320 )
+
+Step 1 of 4: Loading Labeled Examples
+Examples Loaded: Positive(2220), Negative(1320)
+Done
+
+Feeding Examples...Done. Took (0) seconds
+Training Started...
+
+Step 2 of 4: Generating a Pool of Weak Classifiers
+	Using Hands data: No
+	Using Skeleton data : Yes
+	 1/38 - Feature: DiffPositionX (17)
+	 2/38 - Feature: DiffPositionY (4)
+	 3/38 - Feature: DiffPositionZ (20)
+	 4/38 - Feature: Angles (312)
+	 5/38 - Feature: TimeSpaceAngles (43)
+	 6/38 - Feature: Speed (32)
+	 7/38 - Feature: VelocityX (24)
+	 8/38 - Feature: VelocityY (20)
+	 9/38 - Feature: VelocityZ (37)
+	10/38 - Feature: AngleVelocity (52)
+	11/38 - Feature: AngleAcceleration (39)
+	12/38 - Feature: MuscleForceX (13)
+	13/38 - Feature: MuscleForceY (26)
+	14/38 - Feature: MuscleForceZ (17)
+	15/38 - Feature: MuscleTorqueX (189)
+	16/38 - Feature: MuscleTorqueY (36)
+	17/38 - Feature: MuscleTorqueZ (113)
+	18/38 - Feature: MusclePower (3)
+	19/38 - Feature: DiffMuscleForceX (48)
+	20/38 - Feature: DiffMuscleForceY (30)
+	21/38 - Feature: DiffMuscleForceZ (42)
+	22/38 - Feature: VelocityX^2 (1)
+	23/38 - Feature: VelocityY^2 (1)
+	24/38 - Feature: VelocityZ^2 (9)
+	25/38 - Feature: Speed^2 (12)
+	26/38 - Feature: Acceleration (1)
+	27/38 - Feature: AccelerationX (1)
+	28/38 - Feature: AccelerationY (4)
+	29/38 - Feature: AccelerationZ (9)
+	30/38 - Feature: BoneLengthChanges (28)
+	31/38 - Feature: HandValueRaw (Excluded)
+	32/38 - Feature: HandValueMultiClass (Excluded)
+	33/38 - Feature: HandDifferenceRawBest (Excluded)
+	34/38 - Feature: HandDifferenceMultiClassBest (Excluded)
+	35/38 - Feature: HandDifferenceRaw (Excluded)
+	36/38 - Feature: HandDifferenceMultiClass (Excluded)
+	37/38 - Feature: RefinementWrist (Excluded)
+	38/38 - Feature: RefinmentHand (Excluded)
+	Total Classifiers Combined: 1183
+	Num weak classifiers generated: 1183
+	Duration: 0 minutes, 5 seconds
+Done
+
+
+Step 3 of 4: Training Strong Classifier
+	-Evaluating classifier data for each example skeleton frame...
+Done
+	-Running AdaBoost using 8 (of 8 available) hardware threads...
+Done
+	Num weak classifiers: 887
+	Duration: 0 minutes, 0 seconds
+
+
+Step 4 of 4: Optimizing detection parameters
+	-Generate matrix of test results using different detection parameters...
+	Filtering 3 frames using detection threshold 0.049000
+	Duration: 0 minutes, 0 seconds
+Done
+
+
+Testing on Training Data
+    Raw Per Frame Results:
+	% Accuracy True Positives: 100.000000 % (2218/2218)
+	% Error False Positives: 0.000000 % (0/1318)
+    Filtered Per Gesture Results:
+	% Accuracy True Positives: 100.000000 % (22/22)
+	% Error False Positives: 0.000000 % (0/22)
+
+Top 10 contributing weak classifiers:
+	DiffPositionZ( Head, SpineBase ) using inferred joints, fValue < 0.000000, alpha = 1.407704
+	Angles( ShoulderLeft, SpineShoulder, ShoulderRight ) rejecting inferred joints, fValue >= 144.000000, alpha = 0.610687
+	Angles( SpineMid, Head, Neck ) using inferred joints, fValue < 6.000000, alpha = 0.511917
+	Angles( ShoulderLeft, SpineShoulder, ShoulderRight ) rejecting inferred joints, fValue >= 150.000000, alpha = 0.505708
+	TimeSpaceAngles( Neck ) using inferred joints, fValue >= 90.000000, alpha = 0.502938
+	Angles( SpineBase, SpineMid, SpineShoulder ) using inferred joints, fValue >= 164.000000, alpha = 0.460697
+	VelocityY( Neck ) using inferred joints, fValue < -0.000003, alpha = 0.455445
+	TimeSpaceAngles( ShoulderRight ) rejecting inferred joints, fValue < 113.000000, alpha = 0.443605
+	TimeSpaceAngles( SpineMid ) using inferred joints, fValue < 102.000000, alpha = 0.433263
+	DiffPositionZ( HipRight, SpineShoulder ) using inferred joints, fValue >= 0.000000, alpha = 0.409537
+
+Done
+
+Training...Done. Took (6) seconds
+Saving Gesture...
+Saving Gesture...Done. Took (0) seconds
+SUCCESS: The build completed successfully and has been saved to E:\FYP Fouad\Repository\Sadness Gestures\AllGestures.gbd.
