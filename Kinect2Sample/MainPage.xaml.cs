@@ -33,7 +33,14 @@ namespace Kinect2Sample
         private List<int> order = new List<int>();
         private int body_num;
 
-        private Dictionary<string, float> Features = new Dictionary<string, float>();
+        private Dictionary<string, float>[] Features = new Dictionary<string, float>[] {
+            new Dictionary<string, float>(),
+            new Dictionary<string, float>(),
+            new Dictionary<string, float>(),
+            new Dictionary<string, float>(),
+            new Dictionary<string, float>(),
+            new Dictionary<string, float>(),
+        };
 
         //list of the features learned, to be used for the logging
         List<string> featuresList = new List<string>(new string[] { "HeadBackward", "HeadBentForward", "HeadOnHand_Left","HeadOnHand_Right",
@@ -383,12 +390,15 @@ namespace Kinect2Sample
         {
 
             CreateFolder();
-            
-            foreach (var feature in featuresList)
+
+            for (int i = 0; i < 6; i++)
             {
-                Features.Add(feature, 0.0f);
+                foreach (var feature in featuresList)
+                {
+                    Features[i].Add(feature, 0.0f);
+                    
+                }
             }
-            
 
             // one sensor is currently supported
             this.kinectSensor = KinectSensor.GetDefault();
@@ -560,6 +570,8 @@ namespace Kinect2Sample
 
         public async Task log()
         {
+           
+
             await sem.WaitAsync();
             TimeSpan timestamp = DateTime.Now - CurrentDate;
 
@@ -570,19 +582,21 @@ namespace Kinect2Sample
                 var stream = await testFile.OpenAsync(FileAccessMode.ReadWrite);
                 try
                 {
-
+                    
                     using (var outputStream = stream.GetOutputStreamAt(stream.Size)) 
                     {
                         using (var dataWriter = new DataWriter(outputStream))
                         {
                             
-                            dataWriter.WriteString(order.IndexOf(body_num).ToString()+"-");
-                            dataWriter.WriteString(timestamp.ToString() + Environment.NewLine);
-                            foreach (var feature in Features)
+                            for (int i = 0; i < 6; i++)
                             {
-                                dataWriter.WriteString(feature.Key + " " + feature.Value.ToString("0.000") + Environment.NewLine);
+                                dataWriter.WriteString(i.ToString() + "-");
+                                dataWriter.WriteString(timestamp.ToString() + Environment.NewLine);
+                                foreach (var feature in Features[i])
+                                {
+                                    dataWriter.WriteString(feature.Key + " " + feature.Value.ToString("0.000") + Environment.NewLine);
+                                }
                             }
-
                             await dataWriter.StoreAsync();
                             await outputStream.FlushAsync();
                         }
@@ -610,10 +624,11 @@ namespace Kinect2Sample
 
 
         //what to do once a gesture's confidence is modified
-        private void GestureResult_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        private async void GestureResult_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             GestureResultView result = sender as GestureResultView;
-            Features[result.GestureName] = result.Confidence;
+            Features[result.BodyIndex][result.GestureName] = result.Confidence;
+            await log();
         }
 
         //Checks if the Kinect is connected
@@ -763,6 +778,7 @@ namespace Kinect2Sample
                     if (bodies[i].IsTracked)
                     {
                         tracked[i]=bodies[i].TrackingId;
+                       
                         if (!order.Contains(i))
                         {
                             order.Add(i);
@@ -793,14 +809,7 @@ namespace Kinect2Sample
                         
                     }
 
-                    for (int i = 0; i < 6; i++)
-                    {
-                        if (this.gestureDetectorList[i].TrackingId == tracked[i])
-                        {
-                            body_num = i;
-                            await log();
-                        }
-                    }
+                   
 
 
                 }
