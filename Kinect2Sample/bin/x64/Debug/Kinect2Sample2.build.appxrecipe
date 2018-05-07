@@ -262,6 +262,12 @@
     <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\Database\AllGestures.gbd">
       <PackagePath>Database\AllGestures.gbd</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\heiafr.png">
+      <PackagePath>heiafr.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\USJ.png">
+      <PackagePath>USJ.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -277,6 +283,9 @@
     <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\humantech.jpg">
+      <PackagePath>humantech.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\bin\x64\Debug\Kinect2Sample.xr.xml">
       <PackagePath>Kinect2Sample.xr.xml</PackagePath>

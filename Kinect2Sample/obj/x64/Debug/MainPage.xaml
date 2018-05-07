@@ -28,8 +28,8 @@
             <Setter Property="FontSize" Value="20"/>
         </Style>
     </Page.Resources>
-    
-    
+
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid x:Name="RootGrid" Margin="30">
             <Grid.RowDefinitions>
@@ -39,7 +39,10 @@
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" 
                 Style="{StaticResource SubheaderTextBlockStyle}"
-                       Text="Hidden Emotions Detection"/>
+                       Text="FYP PROJECT 2017-2018"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock HorizontalAlignment="Center" Style="{StaticResource SubheaderTextBlockStyle}" Text="Hidden Emotions Detection" Margin="0,0,0,0" Grid.Row="0"/>
+            </StackPanel>
             <StackPanel Grid.Row="0" Orientation="Horizontal" 
                         HorizontalAlignment="Right" 
                         VerticalAlignment="Bottom">
@@ -52,44 +55,59 @@
                 <TextBlock Text=
                     "{Binding CurrentFrameDescription.Height}"/>
             </StackPanel>
-           
+
             <Image x:Name="FrameDisplayImage" Grid.Row="1" Stretch="Uniform"/>
+            <TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Text="Prepared by:" Margin="70,200,0,290" Grid.Row="1"/>
+            <TextBlock FontSize="25" Style="{StaticResource SubheaderTextBlockStyle}" Text="Fouad HANNOUN" Margin="100,230,0,250" Grid.Row="1"/>
+            <TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Text="In Collaboration with:" Margin="100,290,0,250" Grid.Row="1"/>
+            <Image Source="heiafr.png" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="1" Width="450" Height="200"/>
+            <Image  HorizontalAlignment="Left" Source="humantech.jpg" Width="350" Margin="50,300,0,0" Grid.Row="1"/>
+            <Image  HorizontalAlignment="Left" Source="usj.png" Width="350" Margin="50,650,0,0"  Grid.Row="1"/>
+            
+            <TextBlock HorizontalAlignment="Right" Style="{StaticResource SubheaderTextBlockStyle}" Text="Supervised by:" Margin="0,200,0,100" Grid.Row="1"/>
+            <TextBlock HorizontalAlignment="Right" FontSize="25" Style="{StaticResource SubheaderTextBlockStyle}" Text="Maroun CHAMOUN" Margin="0,240,0,250" Grid.Row="1"/>
+            <TextBlock HorizontalAlignment="Right" FontSize="25" Style="{StaticResource SubheaderTextBlockStyle}" Text="Karl DAHER" Margin="0,280,0,220" Grid.Row="1"/>
+            <TextBlock HorizontalAlignment="Right" FontSize="25" Style="{StaticResource SubheaderTextBlockStyle}" Text="Omar ABOU KHALED" Margin="0,320,0,180" Grid.Row="1"/>
+            <TextBlock HorizontalAlignment="Right" FontSize="25" Style="{StaticResource SubheaderTextBlockStyle}" Text="Eléna MUGELLINI" Margin="0,360,0,140" Grid.Row="1"/>
             
             <Viewbox Grid.Row="1" HorizontalAlignment="Center">
                 <Grid x:Name="BodyJointsGrid" Background="Transparent" Width="512"  
      Height="414"/>
             </Viewbox>
-            
+
             <ScrollViewer Grid.Row="2" 
             ScrollViewer.HorizontalScrollBarVisibility="Auto" 
             ScrollViewer.VerticalScrollBarVisibility="Auto">
-            <StackPanel Orientation="Horizontal">
-                
-                <Button x:ConnectionId='1' Content="Infrared" Style="{StaticResource 
+                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center">
+
+                    <Button x:ConnectionId='1' Content="Infrared" Style="{StaticResource 
  			FrameSelectorButtonStyle}"
                                                     />
-                
-                <Button x:ConnectionId='2' Content="Color" Style="{StaticResource 
+
+                    <Button x:ConnectionId='2' Content="Color" Style="{StaticResource 
                         FrameSelectorButtonStyle}" 
                                                  />
-                
+
                     <Button x:ConnectionId='3' Content="Depth" 
             Style="{StaticResource FrameSelectorButtonStyle}"
                                          />
-                
+
                     <Button x:ConnectionId='4' Style="{StaticResource FrameSelectorButtonStyle}"
                                       >
                         <TextBlock Text="Body Mask" TextWrapping="Wrap"/>
                     </Button>
-                
+
                     <Button x:ConnectionId='5' Style="{StaticResource FrameSelectorButtonStyle}"
                                               >
                         <TextBlock Text="Body Joints" TextWrapping="Wrap"/>
                     </Button>
-                
-                
+
+
+
+
+
                 </StackPanel>
-        </ScrollViewer>
+            </ScrollViewer>
             <TextBlock x:Name="GestureVisual0"
 	            Grid.Row="1"
 	            Text="Tracking..."
@@ -102,7 +120,7 @@
             </TextBlock>
             <TextBlock x:Name="GestureVisual1"
 	            Grid.Row="1"
-	            Text="Spine forward"
+	            Text=""
                 Margin="0 30 0 0" 
 	            FontSize="30"
 	            Foreground="White"

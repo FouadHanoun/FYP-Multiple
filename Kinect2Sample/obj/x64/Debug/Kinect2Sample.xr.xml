@@ -66,8 +66,8 @@
       <RootProperty Name="Text" />
       <RootProperty Name="Margin" />
       <RootProperty Name="FontSize" />
-      <RootProperty Name="Foreground" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Opacity" />
       <RootProperty Name="Height" />
@@ -76,11 +76,16 @@
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Orientation" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Children" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Stretch" />
+      <RootProperty Name="Source" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Viewbox">
       <RootProperty Name="HorizontalAlignment" />
