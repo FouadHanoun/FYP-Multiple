@@ -133,8 +133,10 @@
     <Content Include="Database\AllGestures.gbd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="fi.png" />
     <Content Include="heiafr.png" />
     <Content Include="humantech.jpg" />
+    <Content Include="humantech.png" />
     <Content Include="USJ.png" />
     <None Include="Kinect2Sample_TemporaryKey.pfx" />
   </ItemGroup>

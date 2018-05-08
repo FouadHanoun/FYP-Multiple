@@ -262,8 +262,14 @@
     <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\Database\AllGestures.gbd">
       <PackagePath>Database\AllGestures.gbd</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\fi.png">
+      <PackagePath>fi.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\heiafr.png">
       <PackagePath>heiafr.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\humantech.png">
+      <PackagePath>humantech.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\USJ.png">
       <PackagePath>USJ.png</PackagePath>
