@@ -127,8 +127,7 @@ namespace Kinect2Sample
                 Colors.Violet
             };
 
-            // sets total number of possible tracked bodies
-            // create ellipses and lines for drawing bodies
+            // sets total number of possible tracked bodies create ellipses and lines for drawing bodies
             this.BodyCount = bodyCount;
             PopulateVisualJoints();
         }
@@ -409,11 +408,9 @@ namespace Kinect2Sample
         private void UpdateClippedEdges(Body body, bool hasTrackedBody)
         {
             // BUG (waiting for confirmation): 
-            // Clip dectection works differently for top and right edges compared to left and bottom edges
-            // due to the current joint confidence model. This is an ST issue.
+            // Clip dectection works differently for top and right edges compared to left and bottom edges due to the current joint confidence model. This is an ST issue.
             // Joints become inferred immediately as they touch the left/bottom edges and clip detection triggers.
-            // Joints squish on the right/top edges and clip detection doesn't trigger until more joints of 
-            // the body goes out of view (e.g all hand joints vs only handtip).
+            // Joints squish on the right/top edges and clip detection doesn't trigger until more joints of  the body goes out of view (e.g all hand joints vs only handtip).
 
             FrameEdges clippedEdges = body.ClippedEdges;
 

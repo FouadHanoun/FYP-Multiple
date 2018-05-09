@@ -27,9 +27,9 @@ namespace Kinect2Sample
     public sealed partial class MainPage : Page, INotifyPropertyChanged
 
     {
-     
+
         private double[] features = new double[3];
-        private ulong[] tracked = new ulong[6] {6,6,6,6,6,6};
+        private ulong[] tracked = new ulong[6] { 6, 6, 6, 6, 6, 6 };
         private List<int> order = new List<int>();
         private int body_num;
 
@@ -47,7 +47,7 @@ namespace Kinect2Sample
                 "HandOnHead_Left", "HandOnHead_Right","SpineForward","SpineBackward","ShouldersForward","ShouldersRaised",
                 "ArmsAtTrunk","ArmsRaisedShoulder","HandsOnKnees","CrossedArms","ArmsRaisedUp","ArmsExtendedDown","HandsBehindHead","HandOnNeck_Left","HandOnNeck_Right" });
 
-        SemaphoreSlim sem = new SemaphoreSlim(1);  //semaphore pr l'ecriture
+        SemaphoreSlim sem = new SemaphoreSlim(1);  //semaphore pr l'ecriture sur fichiers
         DateTime CurrentDate = DateTime.Now; //reference for the timestamps
 
         private const DisplayFrameType DEFAULT_DISPLAYFRAMETYPE = DisplayFrameType.Infrared;
@@ -110,9 +110,7 @@ namespace Kinect2Sample
         private const float InfraredSceneStandardDeviations = 3.0f;
 
 
-        /// <summary> List of gesture detectors, 
-        ///there will be one detector created for each potential body
-        /// (max of 6) </summary>
+        /// <summary> List of gesture detectors,there will be one detector created for each potential body (max of 6) </summary>
         private List<GestureDetector> gestureDetectorList = null;
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -258,8 +256,7 @@ namespace Kinect2Sample
                 FrameDescription colorFrameDescription =
                     colorFrame.FrameDescription;
 
-                // verify data and write the new color frame data to 
-                // the Writeable bitmap
+                // verify data and write the new color frame data to the Writeable bitmap
                 if ((colorFrameDescription.Width ==
                     this.bitmap.PixelWidth) &&
              (colorFrameDescription.Height == this.bitmap.PixelHeight))
@@ -298,8 +295,7 @@ namespace Kinect2Sample
                 // 1. dividing the incoming value by the source maximum value
                 float intensityRatio = (float)this.infraredFrameData[i] / InfraredSourceValueMaximum;
 
-                // 2. dividing by the 
-                // (average scene value * standard deviations)
+                // 2. dividing by the  (average scene value * standard deviations)
                 intensityRatio /= InfraredSceneValueAverage * InfraredSceneStandardDeviations;
 
                 // 3. limiting the value to InfraredOutputValueMaximum
@@ -308,8 +304,7 @@ namespace Kinect2Sample
                 // 4. limiting the lower value InfraredOutputValueMinimum
                 intensityRatio = Math.Max(InfraredOutputValueMinimum, intensityRatio);
 
-                // 5. converting the normalized value to a byte and using 
-                // the result as the RGB components required by the image
+                // 5. converting the normalized value to a byte and using the result as the RGB components required by the image
                 byte intensity = (byte)(intensityRatio * 255.0f);
                 this.infraredPixels[colorPixelIndex++] = intensity; //Blue
                 this.infraredPixels[colorPixelIndex++] = intensity; //Green
@@ -396,7 +391,7 @@ namespace Kinect2Sample
                 foreach (var feature in featuresList)
                 {
                     Features[i].Add(feature, 0.0f);
-                    
+
                 }
             }
 
@@ -570,7 +565,7 @@ namespace Kinect2Sample
 
         public async Task log()
         {
-           
+
 
             await sem.WaitAsync();
             TimeSpan timestamp = DateTime.Now - CurrentDate;
@@ -582,12 +577,12 @@ namespace Kinect2Sample
                 var stream = await testFile.OpenAsync(FileAccessMode.ReadWrite);
                 try
                 {
-                    
-                    using (var outputStream = stream.GetOutputStreamAt(stream.Size)) 
+
+                    using (var outputStream = stream.GetOutputStreamAt(stream.Size))
                     {
                         using (var dataWriter = new DataWriter(outputStream))
                         {
-                            
+
                             for (int i = 0; i < 6; i++)
                             {
                                 dataWriter.WriteString(i.ToString() + "-");
@@ -600,16 +595,16 @@ namespace Kinect2Sample
                             await dataWriter.StoreAsync();
                             await outputStream.FlushAsync();
                         }
-                         
+
                     }
-                    stream.Dispose(); 
-                   
+                    stream.Dispose();
+
                 }
                 catch (Exception ex)
                 {
                     System.Diagnostics.Debug.WriteLine("Error 11 - Writing on file " + ex.ToString());
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -665,7 +660,7 @@ namespace Kinect2Sample
                     // received and converted
                     this.infraredFrameData = new ushort[infraredFrameDescription.Width * infraredFrameDescription.Height];
                     this.infraredPixels = new byte[infraredFrameDescription.Width * infraredFrameDescription.Height * BytesPerPixel];
-                    this.bitmap = new WriteableBitmap(infraredFrameDescription.Width,infraredFrameDescription.Height);
+                    this.bitmap = new WriteableBitmap(infraredFrameDescription.Width, infraredFrameDescription.Height);
                     break;
 
                 //if the Color button is clicked
@@ -703,7 +698,7 @@ namespace Kinect2Sample
                     this.drawingCanvas = new Canvas();
                     // set the clip rectangle to prevent rendering outside the canvas
                     this.drawingCanvas.Clip = new RectangleGeometry();
-                    this.drawingCanvas.Clip.Rect = new Rect(0.0, 0.0, this.BodyJointsGrid.Width,this.BodyJointsGrid.Height);
+                    this.drawingCanvas.Clip.Rect = new Rect(0.0, 0.0, this.BodyJointsGrid.Width, this.BodyJointsGrid.Height);
                     this.drawingCanvas.Width = this.BodyJointsGrid.Width;
                     this.drawingCanvas.Height = this.BodyJointsGrid.Height;
                     // reset the body joints grid
@@ -730,7 +725,7 @@ namespace Kinect2Sample
         {
             SetupCurrentDisplay(DisplayFrameType.Color);
         }
-        
+
         //Choosing the Depth view option
         private void DepthButton_Click(object sender, RoutedEventArgs e)
         {
@@ -751,7 +746,7 @@ namespace Kinect2Sample
 
 
         //Register the detected gesture + logs each gesture
-        private async void RegisterGesture(BodyFrame bodyFrame)
+        private void RegisterGesture(BodyFrame bodyFrame)
         {
             bool dataReceived = false;
             Body[] bodies = null;
@@ -772,13 +767,13 @@ namespace Kinect2Sample
 
             if (dataReceived)
             {
-                
-                for(int i = 0; i < 6; i++)
+
+                for (int i = 0; i < 6; i++)
                 {
                     if (bodies[i].IsTracked)
                     {
-                        tracked[i]=bodies[i].TrackingId;
-                       
+                        tracked[i] = bodies[i].TrackingId;
+
                         if (!order.Contains(i))
                         {
                             order.Add(i);
@@ -806,10 +801,10 @@ namespace Kinect2Sample
                         }
 
 
-                        
+
                     }
 
-                   
+
 
 
                 }
