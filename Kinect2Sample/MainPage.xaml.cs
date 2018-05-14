@@ -583,11 +583,11 @@ namespace Kinect2Sample
                         using (var dataWriter = new DataWriter(outputStream))
                         {
 
-                            for (int i = 0; i < 6; i++)
+                            for (int i = 0; i < order.Count; i++)
                             {
-                                dataWriter.WriteString(i.ToString() + "-");
+                                dataWriter.WriteString(order[i].ToString() + "-");
                                 dataWriter.WriteString(timestamp.ToString() + Environment.NewLine);
-                                foreach (var feature in Features[i])
+                                foreach (var feature in Features[order[i]])
                                 {
                                     dataWriter.WriteString(feature.Key + " " + feature.Value.ToString("0.000") + Environment.NewLine);
                                 }
