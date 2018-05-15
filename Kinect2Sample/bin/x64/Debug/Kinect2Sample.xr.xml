@@ -65,9 +65,9 @@
       <RootProperty Name="Style" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Text" />
+      <RootProperty Name="FontSize" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Inlines" />
-      <RootProperty Name="FontSize" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="VerticalAlignment" />

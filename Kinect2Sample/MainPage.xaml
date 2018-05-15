@@ -57,19 +57,19 @@
             </StackPanel>
 
             <Image x:Name="FrameDisplayImage" Grid.Row="1" Stretch="Uniform"/>
-            <TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,100,0,290" Grid.Row="1"><Underline>Prepared by::</Underline></TextBlock>
-            <TextBlock FontSize="25" Style="{StaticResource SubheaderTextBlockStyle}" Text="Fouad HANNOUN" Margin="40,130,0,250" Grid.Row="1"/>
-            <TextBlock Style="{StaticResource SubheaderTextBlockStyle}"  Margin="0,480,0,250" Grid.Row="1"><Underline>In Collaboration with:</Underline></TextBlock>
+            <TextBlock FontSize="17" Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,100,0,290" Grid.Row="1"><Underline>Prepared by:</Underline></TextBlock>
+            <TextBlock FontSize="17" Style="{StaticResource SubheaderTextBlockStyle}" Text="Fouad HANNOUN" Margin="40,130,0,250" Grid.Row="1"/>
+            <TextBlock FontSize="15" Style="{StaticResource SubheaderTextBlockStyle}"  Margin="0,480,0,250" Grid.Row="1"><Underline>In Collaboration with:</Underline></TextBlock>
             <Image Source="heiafr.png" HorizontalAlignment="Left" Margin="-10,380,0,0" Grid.Row="1" Width="200" Height="100"/>
             <Image  HorizontalAlignment="Left" Source="humantech.png" Width="200" Margin="00,550,0,0" Grid.Row="1"/>
             <Image  HorizontalAlignment="Left" Source="usj.png" Height="200" Width="200" Margin="0,610,0,-100"  Grid.Row="1"/>
             <Image  HorizontalAlignment="Left" Source="fi.png" Height="50" Width="200" Margin="0,610,0,-100"  Grid.Row="1"/>
 
-            <TextBlock HorizontalAlignment="Left" Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,250,0,100" Grid.Row="1"><Underline>Supervised by:</Underline></TextBlock>
-            <TextBlock HorizontalAlignment="Left" FontSize="25" Style="{StaticResource SubheaderTextBlockStyle}" Text="Maroun CHAMOUN" Margin="40,280,0,250" Grid.Row="1"/>
-            <TextBlock HorizontalAlignment="Left" FontSize="25" Style="{StaticResource SubheaderTextBlockStyle}" Text="Karl DAHER" Margin="40,310,0,220" Grid.Row="1"/>
-            <TextBlock HorizontalAlignment="Left" FontSize="25" Style="{StaticResource SubheaderTextBlockStyle}" Text="Omar ABOU KHALED" Margin="40,340,0,180" Grid.Row="1"/>
-            <TextBlock HorizontalAlignment="Left" FontSize="25" Style="{StaticResource SubheaderTextBlockStyle}" Text="Eléna MUGELLINI" Margin="40,370,0,140" Grid.Row="1"/>
+            <TextBlock HorizontalAlignment="Left" FontSize="15" Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,250,0,100" Grid.Row="1"><Underline>Supervised by:</Underline></TextBlock>
+            <TextBlock HorizontalAlignment="Left" FontSize="15" Style="{StaticResource SubheaderTextBlockStyle}" Text="Maroun CHAMOUN" Margin="40,280,0,250" Grid.Row="1"/>
+            <TextBlock HorizontalAlignment="Left" FontSize="15" Style="{StaticResource SubheaderTextBlockStyle}" Text="Karl DAHER" Margin="40,310,0,220" Grid.Row="1"/>
+            <TextBlock HorizontalAlignment="Left" FontSize="15" Style="{StaticResource SubheaderTextBlockStyle}" Text="Omar ABOU KHALED" Margin="40,340,0,180" Grid.Row="1"/>
+            <TextBlock HorizontalAlignment="Left" FontSize="15" Style="{StaticResource SubheaderTextBlockStyle}" Text="Eléna MUGELLINI" Margin="40,370,0,140" Grid.Row="1"/>
             
             <Viewbox Grid.Row="1" HorizontalAlignment="Center">
                 <Grid x:Name="BodyJointsGrid" Background="Transparent" Width="512"  
@@ -129,6 +129,60 @@
 	VerticalAlignment="Top"
 	Opacity="1">
             </TextBlock>
+            <TextBlock x:Name="Red_Emotion"
+                Grid.Row="1"
+                Text=""
+                Margin="0,88,10,0" 
+                FontSize="30"
+                Foreground="White"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Opacity="1" Height="44"/>
+            <TextBlock x:Name="Orange_Emotion"
+                Grid.Row="1"
+                Text=""
+                Margin="0,136,10,0" 
+                FontSize="30"
+                Foreground="White"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Opacity="1" Height="44"/>
+            <TextBlock x:Name="Green_Emotion"
+                Grid.Row="1"
+                Text=""
+                Margin="0,184,10,0" 
+                FontSize="30"
+                Foreground="White"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Opacity="1" Height="44"/>
+            <TextBlock x:Name="Blue_Emotion"
+                Grid.Row="1"
+                Text=""
+                Margin="0,236,10,0" 
+                FontSize="30"
+                Foreground="White"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Opacity="1" Height="44"/>
+            <TextBlock x:Name="Indigo_Emotion"
+                Grid.Row="1"
+                Text=""
+                Margin="0,288,10,0" 
+                FontSize="30"
+                Foreground="White"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Opacity="1" Height="44"/>
+            <TextBlock x:Name="Viole_Emotion"
+                Grid.Row="1"
+                Text=""
+                Margin="0,338,10,0" 
+                FontSize="30"
+                Foreground="White"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Opacity="1" Height="44"/>
 
         </Grid>
     </Grid>

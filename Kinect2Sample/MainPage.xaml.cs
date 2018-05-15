@@ -27,7 +27,7 @@ namespace Kinect2Sample
     public sealed partial class MainPage : Page, INotifyPropertyChanged
 
     {
-
+        private string[] colors = { "Red", "Orange", "Green", "Blue", "Indigo", "Viole" };
         private double[] features = new double[3];
         private ulong[] tracked = new ulong[6] { 6, 6, 6, 6, 6, 6 };
         private List<int> order = new List<int>();
@@ -555,13 +555,91 @@ namespace Kinect2Sample
             {
                 StorageFolder storageFolder = await ApplicationData.Current.LocalFolder.CreateFolderAsync("Test Folder", CreationCollisionOption.OpenIfExists);
                 StorageFile testFile = await storageFolder.CreateFileAsync("sample.txt", CreationCollisionOption.ReplaceExisting);
+                
             }
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine("Error 11: Failed to create folder: " + ex.ToString());
             }
+
+            
+            
+            
         }
 
+        public async Task update_emotion()
+        {
+
+            StorageFolder storageFolder = await ApplicationData.Current.LocalFolder.CreateFolderAsync("Test Folder", CreationCollisionOption.OpenIfExists);
+            StorageFile EmotionFile = await storageFolder.GetFileAsync("emotions.txt");
+
+            try
+            {
+                string text = await FileIO.ReadTextAsync(EmotionFile);
+                string[] txt = text.Split(' ');
+                int num = Int32.Parse(txt[0]);
+                switch (order[num]) {
+                    case 0:
+                        Red_Emotion.Text = "Red " + Convert.ToString(txt[1]);
+                        break;
+                    case 1:
+                        System.Diagnostics.Debug.WriteLine(txt[1]);
+                        Orange_Emotion.Text = "Orange " + Convert.ToString(txt[1]);
+                        break;
+                    case 2:
+                        System.Diagnostics.Debug.WriteLine(txt[1]);
+                        Green_Emotion.Text = "Green " + Convert.ToString(txt[1]);
+                        break;
+                    case 3:
+                        System.Diagnostics.Debug.WriteLine(txt[1]);
+                        Blue_Emotion.Text = "Blue " + Convert.ToString(txt[1]);
+                        break;
+                    case 4:
+                        System.Diagnostics.Debug.WriteLine(txt[1]);
+                        Indigo_Emotion.Text = "Purple " + Convert.ToString(txt[1]);
+                        break;
+                    case 5:
+                        System.Diagnostics.Debug.WriteLine(txt[1]);
+                        Viole_Emotion.Text = "Pink " + Convert.ToString(txt[1]);
+                        break;
+                }
+            }
+            catch(Exception e)
+            {
+                
+            }
+        }
+
+        public void remove_untracked()
+        {
+            for (int i = 0; i < 6; i++)
+            {
+                if (!order.Contains(i))
+                {
+                    switch (i)
+                    {
+                        case 0:
+                            Red_Emotion.Text = " ";
+                            break;
+                        case 1:
+                            Orange_Emotion.Text = " ";
+                            break;
+                        case 2:
+                            Green_Emotion.Text = " ";
+                            break;
+                        case 3:
+                            Blue_Emotion.Text = " ";
+                            break;
+                        case 4:
+                            Indigo_Emotion.Text = " ";
+                            break;
+                        case 5:
+                            Viole_Emotion.Text = " ";
+                            break;
+                    }
+                }
+            }
+        }
 
         public async Task log()
         {
@@ -574,6 +652,7 @@ namespace Kinect2Sample
             {
                 StorageFolder storageFolder = await ApplicationData.Current.LocalFolder.GetFolderAsync("Test Folder");
                 StorageFile testFile = await storageFolder.GetFileAsync("sample.txt");
+
                 var stream = await testFile.OpenAsync(FileAccessMode.ReadWrite);
                 try
                 {
@@ -585,7 +664,7 @@ namespace Kinect2Sample
 
                             for (int i = 0; i < order.Count; i++)
                             {
-                                dataWriter.WriteString(order[i].ToString() + "-");
+                                dataWriter.WriteString(i.ToString() + "-");
                                 dataWriter.WriteString(timestamp.ToString() + Environment.NewLine);
                                 foreach (var feature in Features[order[i]])
                                 {
@@ -624,6 +703,8 @@ namespace Kinect2Sample
             GestureResultView result = sender as GestureResultView;
             Features[result.BodyIndex][result.GestureName] = result.Confidence;
             await log();
+            await update_emotion();
+            
         }
 
         //Checks if the Kinect is connected
@@ -779,6 +860,17 @@ namespace Kinect2Sample
                             order.Add(i);
                         }
                     }
+                    else
+                    {
+                        if (order.Contains(i))
+                        {
+                            System.Diagnostics.Debug.WriteLine(order[0]);
+                            order.Remove(i);
+                            remove_untracked();
+                        }
+                      //  System.Diagnostics.Debug.WriteLine("update: "+order[0]);
+
+                    }
                 }
 
                 // We may have lost/acquired bodies, so update the corresponding gesture detectors
@@ -817,6 +909,11 @@ namespace Kinect2Sample
         interface IBufferByteAccess
         {
             unsafe void Buffer(out byte* pByte);
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
