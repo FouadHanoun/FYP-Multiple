@@ -1,15 +1,3 @@
-C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\App.g.i.cs
-C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\App.g.cs
-C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\MainPage.g.i.cs
-C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\MainPage.g.cs
-C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\XamlTypeInfo.g.cs
-C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\App.xaml
-C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\MainPage.xaml
-C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\App.xbf
-C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\MainPage.xbf
-C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\XamlSaveStateFile.xml
-C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\Kinect2Sample.exe
-C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\Kinect2Sample.pdb
 C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\bin\x64\Debug\Database\Gestures.gbd
 C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\bin\x64\Debug\Database\Crossed Arms.gbd
 C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\bin\x64\Debug\Database\Sad.gbd
@@ -34,8 +22,20 @@ C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kine
 C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\bin\x64\Debug\Microsoft.Kinect.VisualGestureBuilder.xml
 C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\bin\x64\Debug\Microsoft.Kinect.Xaml.Controls.winmd
 C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\bin\x64\Debug\Microsoft.Kinect.Xaml.Controls.xml
+C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\App.g.i.cs
+C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\App.g.cs
+C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\MainPage.g.i.cs
+C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\MainPage.g.cs
+C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\XamlTypeInfo.g.cs
+C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\App.xaml
+C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\MainPage.xaml
+C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\App.xbf
+C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\MainPage.xbf
+C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\XamlSaveStateFile.xml
 C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\Microsoft.Kinect.Xaml.Controls\Themes\Generic.xbf
 C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\Microsoft.Kinect.Xaml.Controls\SpriteSheet.xbf
+C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\Kinect2Sample.exe
+C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\Kinect2Sample.pdb
 C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\Kinect2Sample2.csproj.GenerateResource.Cache
 C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\priconfig.xml
 C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\obj\x64\Debug\priconfig.xml.intermediate

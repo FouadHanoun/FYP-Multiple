@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\bin\x64\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-15T14:37:48.278</Modified>
+      <Modified>2018-05-17T08:58:48.860</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\bin\x64\Debug\Kinect2Sample.exe">
       <PackagePath>Kinect2Sample.exe</PackagePath>
-      <Modified>2018-05-15T15:03:12.087</Modified>
+      <Modified>2018-05-17T11:50:54.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.Kinect.Face\2.0\References\CommonConfiguration\neutral\Microsoft.Kinect.Face.winmd">
       <PackagePath>Microsoft.Kinect.Face.winmd</PackagePath>
@@ -398,23 +398,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-05-03T12:06:35.722</Modified>
+      <Modified>2018-05-17T08:58:43.665</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-05-15T14:03:10.763</Modified>
+      <Modified>2018-05-17T08:58:43.666</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\bin\x64\Debug\Microsoft.Kinect.Xaml.Controls\Themes\Generic.xbf">
       <PackagePath>Microsoft.Kinect.Xaml.Controls\Themes\Generic.xbf</PackagePath>
-      <Modified>2018-05-15T15:03:11.954</Modified>
+      <Modified>2018-05-17T09:09:22.347</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\bin\x64\Debug\Microsoft.Kinect.Xaml.Controls\SpriteSheet.xbf">
       <PackagePath>Microsoft.Kinect.Xaml.Controls\SpriteSheet.xbf</PackagePath>
-      <Modified>2018-05-15T15:03:11.954</Modified>
+      <Modified>2018-05-17T09:09:22.348</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\fouad.hannoun\Documents\Visual Studio 2015\Projects\Kinect2Sample2\Kinect2Sample\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2018-05-15T14:37:44.053</Modified>
+      <Modified>2018-05-17T08:58:44.715</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

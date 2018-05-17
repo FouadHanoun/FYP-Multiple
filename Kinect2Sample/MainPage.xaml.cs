@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
@@ -27,6 +28,8 @@ namespace Kinect2Sample
     public sealed partial class MainPage : Page, INotifyPropertyChanged
 
     {
+        int delay = 0;
+        int deb = 0;
         private string[] colors = { "Red", "Orange", "Green", "Blue", "Indigo", "Viole" };
         private double[] features = new double[3];
         private ulong[] tracked = new ulong[6] { 6, 6, 6, 6, 6, 6 };
@@ -570,45 +573,40 @@ namespace Kinect2Sample
         public async Task update_emotion()
         {
 
+            
+
             StorageFolder storageFolder = await ApplicationData.Current.LocalFolder.CreateFolderAsync("Test Folder", CreationCollisionOption.OpenIfExists);
             StorageFile EmotionFile = await storageFolder.GetFileAsync("emotions.txt");
-
-            try
-            {
+            
                 string text = await FileIO.ReadTextAsync(EmotionFile);
                 string[] txt = text.Split(' ');
-                int num = Int32.Parse(txt[0]);
-                switch (order[num]) {
+                int num = Convert.ToInt32(txt[0]);
+                switch (order[num])
+                {
                     case 0:
                         Red_Emotion.Text = "Red " + Convert.ToString(txt[1]);
                         break;
                     case 1:
-                        System.Diagnostics.Debug.WriteLine(txt[1]);
                         Orange_Emotion.Text = "Orange " + Convert.ToString(txt[1]);
                         break;
                     case 2:
-                        System.Diagnostics.Debug.WriteLine(txt[1]);
                         Green_Emotion.Text = "Green " + Convert.ToString(txt[1]);
                         break;
                     case 3:
-                        System.Diagnostics.Debug.WriteLine(txt[1]);
                         Blue_Emotion.Text = "Blue " + Convert.ToString(txt[1]);
                         break;
                     case 4:
-                        System.Diagnostics.Debug.WriteLine(txt[1]);
                         Indigo_Emotion.Text = "Purple " + Convert.ToString(txt[1]);
                         break;
                     case 5:
-                        System.Diagnostics.Debug.WriteLine(txt[1]);
                         Viole_Emotion.Text = "Pink " + Convert.ToString(txt[1]);
                         break;
+
                 }
-            }
-            catch(Exception e)
-            {
-                
-            }
-        }
+            
+        } 
+            
+        
 
         public void remove_untracked()
         {
@@ -643,70 +641,91 @@ namespace Kinect2Sample
 
         public async Task log()
         {
-
-
-            await sem.WaitAsync();
+            
             TimeSpan timestamp = DateTime.Now - CurrentDate;
+            await sem.WaitAsync();
 
-            try
-            {
-                StorageFolder storageFolder = await ApplicationData.Current.LocalFolder.GetFolderAsync("Test Folder");
-                StorageFile testFile = await storageFolder.GetFileAsync("sample.txt");
-
-                var stream = await testFile.OpenAsync(FileAccessMode.ReadWrite);
                 try
                 {
+                    StorageFolder storageFolder = await ApplicationData.Current.LocalFolder.GetFolderAsync("Test Folder");
+                    StorageFile testFile = await storageFolder.GetFileAsync("sample.txt");
 
-                    using (var outputStream = stream.GetOutputStreamAt(stream.Size))
+                    var stream = await testFile.OpenAsync(FileAccessMode.ReadWrite);
+                    try
                     {
-                        using (var dataWriter = new DataWriter(outputStream))
+                        using (var outputStream = stream.GetOutputStreamAt(stream.Size))
                         {
-
-                            for (int i = 0; i < order.Count; i++)
+                            using (var dataWriter = new DataWriter(outputStream))
                             {
-                                dataWriter.WriteString(i.ToString() + "-");
-                                dataWriter.WriteString(timestamp.ToString() + Environment.NewLine);
-                                foreach (var feature in Features[order[i]])
+
+                                for (int i = 0; i < order.Count; i++)
                                 {
-                                    dataWriter.WriteString(feature.Key + " " + feature.Value.ToString("0.000") + Environment.NewLine);
+                                    dataWriter.WriteString(i.ToString() + "-");
+                                    dataWriter.WriteString(timestamp.ToString() + Environment.NewLine);
+                                    foreach (var feature in Features[order[i]])
+                                    {
+                                        dataWriter.WriteString(feature.Key + " " + feature.Value.ToString("0.000") + Environment.NewLine);
+                                    }
                                 }
+                                await dataWriter.StoreAsync();
+                                await outputStream.FlushAsync();
                             }
-                            await dataWriter.StoreAsync();
-                            await outputStream.FlushAsync();
+
                         }
+                        stream.Dispose();
 
                     }
-                    stream.Dispose();
+                    catch (Exception ex)
+                    {
+                        System.Diagnostics.Debug.WriteLine("Error 11 - Writing on file " + ex.ToString());
+                    }
 
                 }
                 catch (Exception ex)
                 {
-                    System.Diagnostics.Debug.WriteLine("Error 11 - Writing on file " + ex.ToString());
+                    System.Diagnostics.Debug.WriteLine("Error 10 - Writing on file " + ex.ToString());
                 }
-
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine("Error 10 - Writing on file " + ex.ToString());
-            }
-            finally
-            {
-                sem.Release();
-            }
+                finally
+                {
+                    sem.Release();
+                }
+            
+            
         }
 
 
 
         //what to do once a gesture's confidence is modified
-        private async void GestureResult_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        private void GestureResult_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             GestureResultView result = sender as GestureResultView;
             Features[result.BodyIndex][result.GestureName] = result.Confidence;
-            await log();
-            await update_emotion();
+            update();
             
         }
 
+        private async Task update()
+        {
+            
+            TimeSpan time = (DateTime.Now - CurrentDate);
+            int n = time.Milliseconds;
+            if (n<100 && delay == 10)
+            {
+                delay = 0;
+            }
+            if (n > (delay * 100))
+            {
+                delay++;
+                await log();
+                try
+                {
+                    update_emotion();
+                }
+                catch { }
+            }
+            
+        }
+        
         //Checks if the Kinect is connected
         private void Sensor_IsAvailableChanged(KinectSensor sender, IsAvailableChangedEventArgs args)
         {
@@ -864,7 +883,6 @@ namespace Kinect2Sample
                     {
                         if (order.Contains(i))
                         {
-                            System.Diagnostics.Debug.WriteLine(order[0]);
                             order.Remove(i);
                             remove_untracked();
                         }
