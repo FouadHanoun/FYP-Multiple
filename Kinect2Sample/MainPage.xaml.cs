@@ -573,7 +573,8 @@ namespace Kinect2Sample
         public async Task update_emotion()
         {
 
-            
+            CancellationTokenSource cts = new CancellationTokenSource();
+            cts.CancelAfter(10);
 
             StorageFolder storageFolder = await ApplicationData.Current.LocalFolder.CreateFolderAsync("Test Folder", CreationCollisionOption.OpenIfExists);
             StorageFile EmotionFile = await storageFolder.GetFileAsync("emotions.txt");
