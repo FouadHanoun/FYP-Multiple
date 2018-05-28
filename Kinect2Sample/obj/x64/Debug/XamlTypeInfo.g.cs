@@ -672,3 +672,6 @@ namespace Kinect2Sample.Kinect2Sample2_XamlTypeInfo
 
 
 
+
+
+
